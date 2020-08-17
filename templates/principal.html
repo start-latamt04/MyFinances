@@ -1,0 +1,19 @@
+<style>
+    input#saldo {
+        margin-left: 80px;
+        margin-top: -48px;
+        width: 100px;
+        height: 25px;
+}
+</style>
+
+{% extends 'base.html' %}
+
+{% block title %}Myfinances{% endblock %}
+
+{% block content %}
+    <h2><img src="static/images/money-back64.png"> MyFinances</h2>
+<label for="nome"><h2>Saldo:</h2></label>
+        <input type="text" id="saldo" name="name" placeholder="Saldo Inicial">
+{% endblock %}
+    <a href="{% url 'accounts:user_logout' %}">Fazer Logout</a>

@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#dddddd;
+    font-family: 'Arial';
+}
+
+form {
+    display: block;
+    width: 450px;
+    margin-top: 230px;
+    margin-left: 700px;
+}
+
+h2{
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+    margin-top: -5px;
+    font-family: 'Bubblegum Sans', cursive, sans-serif;
+}
+
+.login{
+        width: 382px;
+        overflow: hidden;
+        margin-left: 510px;
+        margin-top: 100px;
+        padding: 80px;
+        background: #B298FB;
+        border-radius: 15px ;
+}
+
+label{
+    color: #ffffff;
+    font-size: 17px;
+}
+div#Uname{
+    width: 300px;
+    height: 30px;
+    margin-left: 53px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+#Uemail {
+    width: 350px;
+    height: 30px;
+    margin-left: 56px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+
+}
+
+#Pass{
+    width: 350px;
+    height: 40px;
+    margin-left: 53px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+
+}
+#log{
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    background-color: #9BDC90;
+    color: #ffffff;
+    margin-left: 110px;
+
+
+}

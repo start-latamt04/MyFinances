@@ -1,0 +1,83 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dddddd;
+}
+
+nav#menu {
+    display: block;
+}
+
+nav#menu li:hover {
+    background-color: #606060;
+}
+
+nav#menu ul {
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: 67px;
+    left: 750px;
+
+}
+
+header#cabecalho img#foto1 {
+    width: 640px;
+    position: absolute;
+    left: -50px;
+    top: 250px;
+}
+
+nav#menu li {
+    display: inline-block;
+    background-color: #9BDC90;
+    text-align: center;
+    width: 190pt;
+    padding: 10px;
+    margin: 30px;
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -ms-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    transition: background-color 1s;
+}
+
+nav#menu a {
+    color: #000000;
+    text-decoration: none;
+}
+
+nav#menu a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+select{
+    color: #000000;
+    background-color: #9BDC90;
+    top: 100px;
+    width: 160pt;
+    padding: 10px;
+    margin: 30px;
+}
+
+header#cabecalho h1 {
+    font-family: 'Bubblegum Sans', cursive, sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding: 0px;
+    margin-bottom: 0px;
+
+}
+
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif;
+    color: #888888;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 20px;
+    margin-left: 25px;
+}
