@@ -3,8 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 
-from .models import *
-from .forms import UserForm
+
+from .forms import UserForm, SaldoForm
 
 # Create your views here.
 
@@ -46,8 +46,8 @@ def index(request):
 
 
 @login_required(login_url='/login/')
-def principal(request):
-    template_name = 'principal.html'
+def relatorio(request):
+    template_name = 'relatorio_despesas.html'
     return render(request, template_name, {})
 
 

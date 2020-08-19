@@ -129,8 +129,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-<<<<<<< HEAD
+
 """DECIMAL_SEPARATOR = ','
 USE_THOUSAND_SEPARATOR = True"""
-=======
->>>>>>> e18b584c4e3c580cb2470f59acdbb6648dd18642
+
