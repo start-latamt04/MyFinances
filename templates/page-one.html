@@ -34,11 +34,14 @@
                     <li><a href="#">RELATÓRIO DE DESPESAS</a></li>
                 </ul>
             </nav>
+            <form method="post">
+                {% csrf_token %}
             <input id="id_saldo" name="saldo" step="0.01" type="number" placeholder="SALDO">
             <button type="submit">ADICIONAR</button>
             <input id="id_meta" name="meta" step="0.01" type="number" placeholder="META DE GASTOS">
             <button type="submit">ADICIONAR</button>
             <input id="id_gastos" name="gastos" step="0.01" type="number" placeholder="GASTOS">
             <button type="submit">ADICIONAR</button>
+            </form>
         </div>
 {% endblock %}
