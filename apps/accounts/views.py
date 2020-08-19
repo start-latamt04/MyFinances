@@ -61,6 +61,12 @@ def user_logout(request):
 @login_required(login_url='/login/')
 def page_one(request):
     template_name = 'page-one.html'
-    return render(request, template_name, {})
+    if request.method == 'POST':
+        form = SaldoForm(request.POST)
+        if form.is_valid():
+            s = form.save()
+            s.save()
+            return redirect('accounts:page-one')
+    return render(request, template_name)
 
 
