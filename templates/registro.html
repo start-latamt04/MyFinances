@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>MyFinances</title>
-</head>
-<body>
+{% extends 'base.html'%}
+{% load static %}
+
+{% block title%}MyFinances{% endblock%}
+
+{% block content %}
     <h1>Cadastre-se agora</h1>
     {% if messages %}
         {% for message in messages %}
@@ -17,5 +16,5 @@
         <button type="submit">Criar conta</button>
         <a href="{% url 'accounts:user_login' %}">Fazer Login</a>
     </form>
-</body>
-</html>
+
+{% endblock %}
