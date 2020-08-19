@@ -4,7 +4,7 @@
     {% block link%} <link rel="stylesheet" href="static/css/page_one.css"/>{% endblock %}
 {% block title %}MyFinances{% endblock %}
 
-    {% block content %}
+{% block content %}
         <div id="interface">
             <header id="cabecalho">
             <hgroup>
@@ -31,9 +31,14 @@
             </select>
             <nav id="menu">
                 <ul>
-                    <li><a href="/poupanca">POUPANÇA</a></li>
                     <li><a href="#">RELATÓRIO DE DESPESAS</a></li>
                 </ul>
             </nav>
+            <input id="id_saldo" name="saldo" step="0.01" type="number" placeholder="SALDO">
+            <button type="submit">ADICIONAR</button>
+            <input id="id_meta" name="meta" step="0.01" type="number" placeholder="META DE GASTOS">
+            <button type="submit">ADICIONAR</button>
+            <input id="id_gastos" name="gastos" step="0.01" type="number" placeholder="GASTOS">
+            <button type="submit">ADICIONAR</button>
         </div>
-    {% endblock %}
+{% endblock %}
