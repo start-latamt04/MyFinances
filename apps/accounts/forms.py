@@ -1,6 +1,11 @@
 from django import forms
 from django.contrib.auth.models import User
+<<<<<<< HEAD
 from .models import Saldo
+=======
+#from .models import *
+
+>>>>>>> 23a66531d5b6fc9b4d4011b93edfcdc2e540fee3
 
 class UserForm(forms.ModelForm):
     password = forms.CharField(label='Senha', widget=forms.TextInput(attrs={'type': 'password'}))

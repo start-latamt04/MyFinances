@@ -14,7 +14,14 @@
 
 {% block content %}
     <h2><img src="static/images/money-back64.png"> MyFinances</h2>
-<label for="nome"><h2>Saldo:</h2></label>
-        <input type="text" id="saldo" name="name" placeholder="Saldo Inicial">
+    <form action="." method="post" autocomplete="off">
+        {% csrf_token %}
+        <input type="number" name="saldo" id="saldo" placeholder="saldo">
+        <button type="submit">OK</button>
+        <input type="number" name="meta" id="meta" placeholder="meta">
+        <button type="submit">OK</button>
+        <input type="number" name="gastos" id="gastos" placeholder="gastos">
+        <button type="submit">OK</button>
+    </form>
 {% endblock %}
     <a href="{% url 'accounts:user_logout' %}">Fazer Logout</a>
