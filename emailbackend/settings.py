@@ -41,11 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
-    'accounts',
-=======
     'accounts'
->>>>>>> 23a66531d5b6fc9b4d4011b93edfcdc2e540fee3
 ]
 
 MIDDLEWARE = [
@@ -117,11 +113,9 @@ AUTHENTICATION_BACKENDS = [
 
 LANGUAGE_CODE = 'pt-br'
 
-<<<<<<< HEAD
 TIME_ZONE = 'America/Sao_Paulo'
-=======
+
 TIME_ZONE = 'UTC'
->>>>>>> 23a66531d5b6fc9b4d4011b93edfcdc2e540fee3
 
 USE_I18N = True
 
@@ -135,8 +129,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-<<<<<<< HEAD
-"""DECIMAL_SEPARATOR = ','
-USE_THOUSAND_SEPARATOR = True"""
-=======
->>>>>>> 23a66531d5b6fc9b4d4011b93edfcdc2e540fee3
