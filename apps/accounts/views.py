@@ -61,3 +61,5 @@ def user_logout(request):
 def page_one(request):
     template_name = 'page-one.html'
     return render(request, template_name, {})
+
+

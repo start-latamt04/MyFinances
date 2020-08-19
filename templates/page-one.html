@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}MyFinances{% endblock %}
 
@@ -29,9 +30,15 @@
         </select>
         <nav id="menu">
             <ul>
-                <li><a href="/poupanca">POUPANÇA</a></li>
                 <li><a href="#">RELATÓRIO DE DESPESAS</a></li>
             </ul>
         </nav>
+        <form action="." method="post">
+        <input id="id_saldo" name="saldo" step="0.01" type="number" value="0">
+        <input id="id_meta" name="meta" step="0.01" type="number" value="0">
+        <input id="id_gastos" name="gastos" step="0.01" type="number" value="0">
+        </form>>
+
     </div>
+
 {% endblock %}
