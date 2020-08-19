@@ -46,8 +46,8 @@ def index(request):
 
 
 @login_required(login_url='/login/')
-def principal(request):
-    template_name = 'principal.html'
+def relatorio(request):
+    template_name = 'relatorio_despesas.html'
     return render(request, template_name, {})
 
 
