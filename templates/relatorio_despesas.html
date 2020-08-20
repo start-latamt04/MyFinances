@@ -13,15 +13,12 @@
 {% block title %}Myfinances{% endblock %}
 
 {% block content %}
+
     <h2><img src="static/images/money-back64.png"> MyFinances</h2>
-    <form action="." method="post" autocomplete="off">
-        {% csrf_token %}
-        <input type="number" name="saldo" id="saldo" placeholder="saldo">
-        <button type="submit">OK</button>
-        <input type="number" name="meta" id="meta" placeholder="meta">
-        <button type="submit">OK</button>
-        <input type="number" name="gastos" id="gastos" placeholder="gastos">
-        <button type="submit">OK</button>
-    </form>
+    {% for saldo in total %}
+    <li class=gastos-item>
+        <span>{{saldo.gastos}}</span>
+    </li>
+    {% endfor %}
 {% endblock %}
     <a href="{% url 'accounts:user_logout' %}">Fazer Logout</a>

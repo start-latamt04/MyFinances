@@ -1,12 +1,11 @@
-from django.shortcuts import render, redirect
+
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
-
-
+from django.shortcuts import *
+from django.http import HttpResponse
 from .forms import UserForm, SaldoForm
-
-# Create your views here.
+from .models import Saldo
 
 
 def cadastro(request):
@@ -47,8 +46,9 @@ def index(request):
 
 @login_required(login_url='/login/')
 def relatorio(request):
+    total = Saldo.objects.all()
     template_name = 'relatorio_despesas.html'
-    return render(request, template_name, {})
+    return render(request, template_name, {'total': total})
 
 
 @login_required(login_url='/login/')
@@ -68,5 +68,3 @@ def page_one(request):
             s.save()
             return redirect('accounts:page-one')
     return render(request, template_name)
-
-
