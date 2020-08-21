@@ -1,24 +1,17 @@
 
-<style>
-    input#saldo {
-        margin-left: 80px;
-        margin-top: -48px;
-        width: 100px;
-        height: 25px;
-}
-</style>
-
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Myfinances{% endblock %}
 
 {% block content %}
 
     <h2><img src="static/images/money-back64.png"> MyFinances</h2>
+    {% csrf_token %}
     {% for saldo in total %}
     <li class=gastos-item>
-        <span>{{saldo.gastos}}</span>
+        <span>Você gastou R$ {{saldo.gastos}}</span>
+        <span> dia {{saldo.created_at}}</span>
     </li>
     {% endfor %}
+        <a href="{% url 'accounts:user_logout' %}">FAZER LOGOUT</a>
 {% endblock %}
-    <a href="{% url 'accounts:user_logout' %}">Fazer Logout</a>
