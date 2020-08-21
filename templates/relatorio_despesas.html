@@ -1,11 +1,11 @@
 
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Myfinances{% endblock %}
+{% block link%}<link rel="stylesheet" href="static/css/relatorio_despesas.css"/>{% endblock %}
 
 {% block content %}
-
     <h2><img src="static/images/money-back64.png"> MyFinances</h2>
+    <h3>Relatório Mensal</h3>
     {% csrf_token %}
     {% for saldo in total %}
     <li class=gastos-item>
@@ -13,5 +13,8 @@
         <span> dia {{saldo.created_at}}</span>
     </li>
     {% endfor %}
-        <a href="{% url 'accounts:user_logout' %}">FAZER LOGOUT</a>
+        <a href="{% url 'accounts:user_logout' %}">Fazer Logout</a>
+        <center>
+            <img id="foto1" src="/static/images/poupanca.png" align="right">
+        </center>
 {% endblock %}
