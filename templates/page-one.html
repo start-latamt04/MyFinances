@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
+
 {% load static %}
 
-{% block link%}<link rel="stylesheet" href="static/css/page_one.css"/>{% endblock %}
+    {% block link%} <link rel="stylesheet" type="text/css" href="{% static '/css/page_one.css' %}"/>{% endblock %}
+
 {% block title %}MyFinances{% endblock %}
 
 {% block content %}
@@ -34,6 +36,7 @@
                     <a href="{% url 'accounts:relatorio_despesas' %}">RELATÓRIO DE DESPESAS</a>
                 </ul>
             </nav>
+          
             <form method="post">
                 {% csrf_token %}
             <input id="id_saldo" name="saldo" step="0.01" type="number" placeholder="SALDO">
