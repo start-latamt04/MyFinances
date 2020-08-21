@@ -33,7 +33,7 @@
             </select>
             <nav id="menu">
                 <ul>
-                    <li><a href="relatorio-despesas">RELATÓRIO DE DESPESAS</a></li>
+                    <a href="{% url 'accounts:relatorio_despesas' %}">RELATÓRIO DE DESPESAS</a>
                 </ul>
             </nav>
           
@@ -47,4 +47,5 @@
             <button type="submit">ADICIONAR</button>
             </form>
         </div>
+
 {% endblock %}
