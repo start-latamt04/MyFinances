@@ -1,10 +1,12 @@
 {% extends 'base.html'%}
 {% load static %}
 
+    {% block link %}<link rel="stylesheet" type="text/css" href="{% static '/css/create.css' %}"/>{% endblock %}
+
 {% block title%}MyFinances{% endblock%}
 
 {% block content %}
-    <h1>Cadastre-se agora</h1>
+    <h2>Cadastre-se agora</h2>
     {% if messages %}
         {% for message in messages %}
             {{ message }}
@@ -12,9 +14,11 @@
     {% endif %}
     <form action="." method="post" autocomplete="off">
         {% csrf_token %}
+        <div>
         {{ form.as_p }}
-        <button type="submit">Criar conta</button>
-        <a href="{% url 'accounts:user_login' %}">Fazer Login</a>
+        </div>
+        <button type="submit" id="log">Criar conta</button><br/>
+        <a id="acesse" href="{% url 'accounts:user_login' %}">Fazer Login</a>
     </form>
 
 {% endblock %}

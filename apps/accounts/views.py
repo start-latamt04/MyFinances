@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 
 
-from .forms import UserForm, SaldoForm
+from .forms import *
 
 # Create your views here.
 
@@ -64,9 +64,7 @@ def page_one(request):
     if request.method == 'POST':
         form = SaldoForm(request.POST)
         if form.is_valid():
-            s = form.save()
-            s.save()
+            form.save()
             return redirect('accounts:page-one')
     return render(request, template_name)
-
 

@@ -17,7 +17,7 @@ body
         border-radius: 15px ;
 
 }
-h2{
+h1{
     text-align: center;
     color: #ffffff;
     padding: 20px;
@@ -29,7 +29,10 @@ label{
     color: #ffffff;
     font-size: 17px;
 }
-#Uname{
+div#logar{
+    top: 150px;
+}
+#username{
     width: 300px;
     height: 30px;
     border: none;
@@ -37,7 +40,7 @@ label{
     padding-left: 8px;
 }
 
-#Pass{
+#password{
     width: 300px;
     height: 30px;
     border: none;
