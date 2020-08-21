@@ -66,4 +66,5 @@ def page_one(request):
         if form.is_valid():
             form.save()
             return redirect('accounts:page-one')
-    return render(request, template_name, {})
+    return render(request, template_name)
+

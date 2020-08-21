@@ -36,7 +36,8 @@
                     <li><a href="relatorio-despesas">RELATÓRIO DE DESPESAS</a></li>
                 </ul>
             </nav>
-            <form action="." method="post">
+          
+            <form method="post">
                 {% csrf_token %}
             <input id="id_saldo" name="saldo" step="0.01" type="number" placeholder="SALDO">
             <button type="submit">ADICIONAR</button>
