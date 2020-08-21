@@ -1,14 +1,14 @@
 {% extends 'base.html'%}
 {% load static %}
-
+    {% block link %} <link rel="stylesheet" href="{% static '/css/login.css' %}"/>{% endblock%}
 {% block title%}MyFinances{% endblock%}
 
 {% block content %}
     <h1>Login</h1>
-    <form action="." method="post" autocomplete="off">
+    <form action="." method="post" autocomplete="off" id="login">
         {% csrf_token %}
-        <input type="text" name="username" placeholder="Usuário ou e-mail">
-        <input type="password" name="password" placeholder="Senha">
-        <button type="submit">Entrar</button>
+        <input type="text" name="username" id="username" placeholder="Usuário ou e-mail">
+        <input type="password" name="password" id="password" placeholder="Senha">
+        <button type="submit" id="log">Entrar</button>
     </form>
 {% endblock %}
