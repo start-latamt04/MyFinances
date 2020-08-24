@@ -1,0 +1,71 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#dddddd;
+    font-family: 'Arial';
+}
+
+h1 {
+    font-family: 'Titillium Web', sans-serif;
+    margin-left: 680px;
+}
+
+h2 {
+    font-family: 'Bubblegum Sans', cursive, sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding: 0px;
+    margin-bottom: 0px;
+
+}
+
+.login{
+    width: 500px;
+    overflow: hidden;
+    margin-left: 490px;
+    margin-top: 40px;
+    padding: 80px;
+    background: #9BDC90;
+    border-radius: 15px ;
+
+}
+
+.login select{
+    position: relative;
+    color: #000000;
+    background-color: #dddddd;
+    top: -60px;
+    left: -60px;;
+    width: 100pt;
+    padding: 10px;
+}
+
+
+ul li {
+    color: #000000;
+}
+
+ul li:hover {
+    color: #BC0000;
+}
+
+.login img {
+    position: relative;
+    margin-left: 300px;
+    top: 120px;
+}
+
+.login a {
+    position: relative;
+    margin-left: -62px;
+    top: 68px;
+    color: #000000
+}
+
+.login a:hover {
+    color:  #BC0000;
+}
