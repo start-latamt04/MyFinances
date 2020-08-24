@@ -16,11 +16,7 @@
             </header>
             <nav id="menu">
                 <ul>
-<<<<<<< HEAD
-                    <li><a href="{% url 'accounts:relatorio-despesas' %}">RELATÓRIO DE DESPESAS</a></li>
-=======
                     <li style="margin-left: 270px; margin-top: 22px;"><a href="{% url 'accounts:relatorio-despesas' %}">RELATÓRIO DE DESPESAS</a></li>
->>>>>>> b5f7c016f9f4c1df5264a2d7ba610211455a8856
                 </ul>
             </nav>
 
@@ -32,10 +28,9 @@
             <button type="submit">ADICIONAR</button>
             <input id="id_gastos" name="gastos" step="0.01" type="number" placeholder="GASTOS">
             <button type="submit">ADICIONAR</button>
-            <input id="id_descricao" name="descricao" type="text" placeholder="DESCRIÇÃO">
-            <button type="submit">ADICIONAR</button>
+                {% for saldo in total %}
+                {{saldo.saldo}}
+                {% endfor %}
             </form>
         </div>
-
-
 {% endblock %}
