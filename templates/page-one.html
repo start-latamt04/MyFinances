@@ -12,34 +12,21 @@
             <hgroup>
                 <h1> <img src="{% static '/images/money-back64.png' %}" width="45px"/> MyFinances</h1>
             </hgroup>
-
-            <center>
                 <img id="foto1" src="/static/images/page_one.png" align="right">
-            </center>
             </header>
-            <select>
-            <option value="1">Janeiro</option>
-            <option value="2">Fevereiro</option>
-            <option value="3">Março</option>
-            <option value="4">Abril</option>
-            <option value="5">Maio</option>
-            <option value="6">Junho</option>
-            <option value="7">Julho</option>
-            <option value="8">Agosto</option>
-            <option value="9">Setembro</option>
-            <option value="10">Outubro</option>
-            <option value="11">Novembro</option>
-            <option value="12">Dezembro</option>
-            </select>
             <nav id="menu">
                 <ul>
+<<<<<<< HEAD
                     <li><a href="{% url 'accounts:relatorio-despesas' %}">RELATÓRIO DE DESPESAS</a></li>
+=======
+                    <li style="margin-left: 270px; margin-top: 22px;"><a href="{% url 'accounts:relatorio-despesas' %}">RELATÓRIO DE DESPESAS</a></li>
+>>>>>>> b5f7c016f9f4c1df5264a2d7ba610211455a8856
                 </ul>
             </nav>
-          
+
             <form method="post">
                 {% csrf_token %}
-            <input id="id_saldo" name="saldo" step="0.01" type="number" placeholder="SALDO">
+            <input id="id_saldo" name="saldo" step="0.01" type="number" placeholder="SALDO" style="margin-top: 5px;">
             <button type="submit">ADICIONAR</button>
             <input id="id_meta" name="meta" step="0.01" type="number" placeholder="META DE GASTOS">
             <button type="submit">ADICIONAR</button>

@@ -7,63 +7,60 @@ body{
     font-family: 'Arial';
 }
 
-form {
-    display: block;
-    width: 450px;
-    margin-top: 230px;
-    margin-left: 700px;
+.login{
+    width: 382px;
+    overflow: hidden;
+    margin-left: 520px;
+    margin-top: 100px;
+    padding: 80px;
+    background: #B298FB;
+    border-radius: 15px ;
 }
 
 h2{
     text-align: center;
     color: #ffffff;
     padding: 20px;
-    margin-top: -5px;
+    margin-top: 10px;
     font-family: 'Bubblegum Sans', cursive, sans-serif;
 }
 
-.login{
-        width: 382px;
-        overflow: hidden;
-        margin-left: 510px;
-        margin-top: 100px;
-        padding: 80px;
-        background: #B298FB;
-        border-radius: 15px ;
-}
-
-label{
-    color: #ffffff;
-    font-size: 17px;
-}
-div#Uname{
+#first_name {
     width: 300px;
     height: 30px;
-    margin-left: 53px;
+    margin-left: 40px;
     border: none;
     border-radius: 3px;
     padding-left: 8px;
 }
 
-#Uemail {
-    width: 350px;
+#username {
+    width: 300px;
     height: 30px;
-    margin-left: 56px;
+    margin-left: 27px;
     border: none;
     border-radius: 3px;
     padding-left: 8px;
-
 }
 
-#Pass{
-    width: 350px;
-    height: 40px;
-    margin-left: 53px;
+#email {
+    width: 300px;
+    height: 30px;
+    margin-left: 40px;
     border: none;
     border-radius: 3px;
     padding-left: 8px;
-
 }
+
+#Pass {
+    width: 300px;
+    height: 30px;
+    margin-left: 35px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
 #log{
     width: 200px;
     height: 30px;
@@ -72,5 +69,19 @@ div#Uname{
     padding-left: 7px;
     background-color: #9BDC90;
     color: #ffffff;
-    margin-left: 110px;
+    margin-left: 85px;
+}
+
+a {
+    position: relative;
+    background-color: #b298fb;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: -50px;
+    bottom: -50px;
+}
+
+
+a:hover {
+    color: #000000;
 }

@@ -1,13 +1,37 @@
-
 {% extends 'base.html' %}
 {% load static %}
+<<<<<<< HEAD
 {% block link%}<link rel="stylesheet" href="static/css/relatorio_despesas.css"/>{% endblock %}
 
 {% block content %}
     <h2><img src="static/images/money-back64.png"> MyFinances</h2>
     <h3>Relatório Mensal</h3>
+=======
+    {% block link%}<link rel="stylesheet" type="text/css" href="{% static '/css/relatorio.css' %}">{% endblock %}
+
+{% block title %}Myfinances{% endblock %}
+
+{% block content %}
+    <h2><img src="{% static '/images/money-back64.png' %}"> MyFinances</h2>
+>>>>>>> b5f7c016f9f4c1df5264a2d7ba610211455a8856
     {% csrf_token %}
+<div class="login">
+    <select>
+        <option value="1">Janeiro</option>
+        <option value="2">Fevereiro</option>
+        <option value="3">Março</option>
+        <option value="4">Abril</option>
+        <option value="5">Maio</option>
+        <option value="6">Junho</option>
+        <option value="7">Julho</option>
+        <option value="8">Agosto</option>
+        <option value="9">Setembro</option>
+        <option value="10">Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Dezembro</option>
+    </select>
     {% for saldo in total %}
+<<<<<<< HEAD
     <li class=gastos-item style="list-style: none;">
         <span>Você gastou R$ {{saldo.gastos}}</span>
         <span> dia {{saldo.created_at}}</span>
@@ -19,4 +43,16 @@
             <img id="foto1" src="/static/images/poupanca.png" align="right">
         </center>
 
+=======
+    <ul>
+        <li class=gastos-item>
+            <span>Você gastou R$ {{saldo.gastos}}</span>
+            <span> dia {{saldo.created_at}}</span>
+        </li>
+    </ul>
+    {% endfor %}
+    <img src="{% static '/images/relatorio.png' %}" width="280px;"/>
+    <a href="{% url 'accounts:user_logout' %}" style="text-decoration: none;">FAZER LOGOUT</a>
+</div>
+>>>>>>> b5f7c016f9f4c1df5264a2d7ba610211455a8856
 {% endblock %}
