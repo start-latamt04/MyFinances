@@ -8,13 +8,15 @@
     <h3>Relatório Mensal</h3>
     {% csrf_token %}
     {% for saldo in total %}
-    <li class=gastos-item>
+    <li class=gastos-item style="list-style: none;">
         <span>Você gastou R$ {{saldo.gastos}}</span>
         <span> dia {{saldo.created_at}}</span>
+        <span>referente a {{saldo.descricao}}</span>
     </li>
     {% endfor %}
         <a href="{% url 'accounts:user_logout' %}">Fazer Logout</a>
         <center>
             <img id="foto1" src="/static/images/poupanca.png" align="right">
         </center>
+
 {% endblock %}

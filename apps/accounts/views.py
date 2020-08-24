@@ -8,6 +8,7 @@ from .forms import UserForm, SaldoForm
 from .models import Saldo
 
 
+
 def cadastro(request):
     template_name = 'registro.html'
     context = {}
@@ -64,7 +65,6 @@ def page_one(request):
     if request.method == 'POST':
         form = SaldoForm(request.POST)
         if form.is_valid():
-            s = form.save()
-            s.save()
+            form.save()
             return redirect('accounts:page-one')
     return render(request, template_name)

@@ -1,15 +1,13 @@
 from django.db import models
-from django.db.models import DateTimeField
 
 
 class Saldo(models.Model):
 
-
-    saldo = models.DecimalField(max_digits=10000000, decimal_places=2, default=0)
-    meta = models.DecimalField(max_digits=10000000, decimal_places=2, default=0)
-    gastos = models.DecimalField(max_digits=10000000, decimal_places=2, default=0)
+    saldo = models.DecimalField(max_digits=10000000, decimal_places=2, null=True)
+    meta = models.DecimalField(max_digits=10000000, decimal_places=2, null=True)
+    gastos = models.DecimalField(max_digits=10000000, decimal_places=2, null=True)
+    descricao = models.TextField(max_length=40, null=True, default="")
     created_at = models.DateTimeField(auto_now_add=True)
 
-
     def __str__(self):
-        return self.gastos
+        return self.gastos, self.descricao
