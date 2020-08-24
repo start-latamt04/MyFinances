@@ -1,12 +1,9 @@
-
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import *
-from django.http import HttpResponse
 from .forms import UserForm, SaldoForm
 from .models import Saldo
-
 
 
 def cadastro(request):

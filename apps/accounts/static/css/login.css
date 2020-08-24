@@ -1,53 +1,53 @@
 @charset "UTF-8";
 
-body
-{
+body{
     margin: 0;
     padding: 0;
     background-color:#dddddd;
     font-family: 'Arial';
 }
-.login{
-        width: 382px;
-        overflow: hidden;
-        margin-left: 520px;
-        margin-top: 100px;
-        padding: 80px;
-        background: #B298FB;
-        border-radius: 15px ;
 
+
+.login{
+    width: 382px;
+    overflow: hidden;
+    margin-left: 520px;
+    margin-top: 100px;
+    padding: 80px;
+    background: #B298FB;
+    border-radius: 15px ;
 }
+
+
 h1{
     text-align: center;
     color: #ffffff;
     padding: 20px;
-    margin-top: 17px;
+    margin-top: 5px;
     font-family: 'Bubblegum Sans', cursive, sans-serif;
 }
 
-label{
-    color: #ffffff;
-    font-size: 17px;
-}
-div#logar{
-    top: 150px;
-}
-#username{
-    width: 300px;
+
+#username {
+    width: 280px;
     height: 30px;
     border: none;
     border-radius: 3px;
     padding-left: 8px;
 }
+
 
 #password{
-    width: 300px;
+    width: 280px;
     height: 30px;
+    margin-top: 10px;
+    margin-left: 8px;
     border: none;
     border-radius: 3px;
     padding-left: 8px;
-
 }
+
+
 #log{
     width: 200px;
     height: 30px;
@@ -56,23 +56,20 @@ div#logar{
     padding-left: 7px;
     background-color: #9BDC90;
     color: #ffffff;
-    margin-left: 100px;
-
-
+    margin-left: 95px;
+    margin-top: 20px;
 }
-span{
-    color: #ffffff;
-    font-size: 17px;
-}
+
 
 a {
-    position: absolute;
+    position: relative;
     background-color: #b298fb;
     color: #ffffff;
     text-decoration: none;
-    margin-left: 270px;
-    bottom: 220px;
+    margin-left: 110px;
+    bottom: -50px;
 }
+
 
 a:hover {
     color: #000000;

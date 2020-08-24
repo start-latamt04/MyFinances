@@ -17,7 +17,7 @@ nav#menu li:hover {
 nav#menu ul {
     list-style: none;
     text-transform: uppercase;
-    position: absolute;
+    position: relative;
     top: 67px;
     left: 750px;
 
@@ -31,7 +31,6 @@ header#cabecalho img#foto1 {
 }
 
 nav#menu li {
-    display: inline-block;
     background-color: #9BDC90;
     text-align: center;
     width: 190pt;
@@ -54,15 +53,6 @@ nav#menu a:hover {
     text-decoration: none;
 }
 
-select{
-    color: #000000;
-    background-color: #9BDC90;
-    top: 100px;
-    width: 160pt;
-    padding: 10px;
-    margin: 30px;
-}
-
 header#cabecalho h1 {
     font-family: 'Bubblegum Sans', cursive, sans-serif;
     font-size: 30pt;
@@ -70,7 +60,6 @@ header#cabecalho h1 {
     text-shadow: 1px 1px 1px rgba(0,0,0,.6);
     padding: 0px;
     margin-bottom: 0px;
-
 }
 
 header#cabecalho h2 {
