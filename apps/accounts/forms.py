@@ -18,8 +18,8 @@ class SaldoForm(forms.ModelForm):
 
     class Meta:
         model = Saldo
-<<<<<<< HEAD
+
         fields = ['saldo', 'meta', 'gastos', 'descricao']
-=======
+
         fields = ['saldo', 'meta', 'gastos']
->>>>>>> b5f7c016f9f4c1df5264a2d7ba610211455a8856
+
