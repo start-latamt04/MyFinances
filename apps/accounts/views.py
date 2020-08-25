@@ -6,6 +6,12 @@ from .forms import UserForm, SaldoForm
 from .models import Saldo
 
 
+
+from .forms import UserForm, SaldoForm
+
+# Create your views here.
+
+
 def cadastro(request):
     template_name = 'registro.html'
     context = {}
@@ -62,6 +68,9 @@ def page_one(request):
     if request.method == 'POST':
         form = SaldoForm(request.POST)
         if form.is_valid():
-            form.save()
+            s = form.save()
+            s.save()
             return redirect('accounts:page-one')
     return render(request, template_name)
+
+

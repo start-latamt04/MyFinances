@@ -11,4 +11,3 @@ class Saldo(models.Model):
 
     def __str__(self):
         return self.gastos, self.descricao
-
