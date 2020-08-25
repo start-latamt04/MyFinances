@@ -1,9 +1,7 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
-    {% block link%} <link rel="stylesheet" type="text/css" href="{% static '/css/page_one.css' %}"/>{% endblock %}
-
+    {% block link%} <link rel="stylesheet" href="static/css/page_one.css"/>{% endblock %}
 {% block title %}MyFinances{% endblock %}
 
 {% block content %}
@@ -16,10 +14,14 @@
             </header>
             <nav id="menu">
                 <ul>
+
                     <li style="margin-left: 270px; margin-top: 22px;"><a href="{% url 'accounts:relatorio-despesas' %}">RELATÓRIO DE DESPESAS</a></li>
                 </ul>
             </nav>
 
+                    <li><a href="#">RELATÓRIO DE DESPESAS</a></li>
+                </ul>
+            </nav>
             <form method="post">
                 {% csrf_token %}
             <input id="id_saldo" name="saldo" step="0.01" type="number" placeholder="SALDO" style="margin-top: 5px;">

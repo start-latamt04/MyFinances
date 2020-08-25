@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
     {% block link%}<link rel="stylesheet" href="{% static '/css/login.css' %}" type="text/css">{% endblock%}
 
 {% block title%}MyFinances{% endblock%}
@@ -18,4 +19,16 @@
                 <a href="{% url 'accounts:cadastro' %}"> ou Cadastre-se agora!</a>
             </div>
         </form>
+
+{% block title%}MyFinances{% endblock%}
+
+{% block content %}
+    <h1>Login</h1>
+    <form action="." method="post" autocomplete="off">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Usuário ou e-mail">
+        <input type="password" name="password" placeholder="Senha">
+        <button type="submit">Entrar</button>
+    </form>
+
 {% endblock %}
