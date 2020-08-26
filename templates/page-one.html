@@ -22,21 +22,31 @@
 
             <form method="post">
                 {% csrf_token %}
-                <div class="inputs">
-                    <input class="saldo" name="saldo" step="0.01" type="number" placeholder="SALDO" style="margin-top: 5px;">
-                    <button type="submit">ADICIONAR</button>
-                    <input id="meta" name="meta" step="0.01" type="number" placeholder="META DE GASTOS">
-                    <button type="submit">ADICIONAR</button>
-                    <input id="gastos" name="gastos" step="0.01" type="number" placeholder="GASTOS">
-                    <button type="submit">ADICIONAR</button>
-                    <input id="descricao" name="descricao" type="text" placeholder="DESCRIÇÃO">
+                <div class="saldo">
+                    <input name="saldo" step="0.01" type="number" placeholder="SALDO" style="margin-top: 5px;">
                     <button type="submit">ADICIONAR</button>
                 </div>
+                <div class="metas">
+                    <input name="meta" step="0.01" type="number" placeholder="META DE GASTOS">
+                    <button type="submit">ADICIONAR</button>
+                </div>
+                <div class="gastos">
+                    <input name="gastos" step="0.01" type="number" placeholder="GASTOS">
+                    <button type="submit">ADICIONAR</button>
+                </div>
+                <div class="desc">
+                    <input name="descricao" type="text" placeholder="DESCRIÇÃO" autocomplete="off">
+                    <button type="submit">ADICIONAR</button>
+                </div>
+                <div class="money">
                 {% for saldo in total %}
-                            <span>{{saldo.saldo}}</span>
-                            <span>{{saldo.meta}}</span>
-                            <span>{{saldo.gastos}}</span>
+                    <ul>
+                        <li class="s" id="s1"><b>Saldo atual:</b> <span>{{saldo.saldo}}</span></li>
+                        <li class="s" id="s2"><b>Meta:</b> <span>{{saldo.meta}}</span></li>
+                        <li class="s" id="s3"><b>Ultimo gasto:</b> <span>{{saldo.gastos}}</span></li>
+                    </ul>
                 {% endfor %}
+                </div>
             </form>
         </div>
 {% endblock %}
