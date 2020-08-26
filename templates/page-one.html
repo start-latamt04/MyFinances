@@ -32,11 +32,15 @@
                     <input id="descricao" name="descricao" type="text" placeholder="DESCRIÇÃO">
                     <button type="submit">ADICIONAR</button>
                 </div>
+                <div class="money">
                 {% for saldo in total %}
-                            <span>{{saldo.saldo}}</span>
-                            <span>{{saldo.meta}}</span>
-                            <span>{{saldo.gastos}}</span>
+                    <ul>
+                        <li class="s" id="s1"><b>Saldo atual:</b> <span>{{saldo.saldo}}</span></li>
+                        <li class="s" id="s2"><b>Meta:</b> <span>{{saldo.meta}}</span></li>
+                        <li class="s" id="s3"><b>Ultimo gasto:</b> <span>{{saldo.gastos}}</span></li>
+                    </ul>
                 {% endfor %}
+                </div>
             </form>
         </div>
 {% endblock %}
