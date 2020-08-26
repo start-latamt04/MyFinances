@@ -93,3 +93,29 @@ div ul li#s2 {
 div ul li#s3 {
     margin-left: 5px;
 }
+
+.saldo {
+    display: inline;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.metas {
+    display: inline;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.gastos {
+    margin-top: 20px;
+    display: flex;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.desc {
+    display: flex;
+    width: 100px;
+    margin-left: 275px;
+    margin-top: -20px;
+}
