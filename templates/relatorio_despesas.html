@@ -24,13 +24,13 @@
         <option value="12">Dezembro</option>
     </select>
     {% for saldo in total %}
-    <ul>
-        <li class=gastos-item style="list-style: none;">
-            <span>Você gastou R$ {{saldo.gastos}}</span>
-            <span> dia {{saldo.created_at}}</span>
-            <span>referente a {{saldo.descricao}}</span>
-        </li>
-    </ul>
+        <ul>
+            <li class=gastos-item style="list-style: none;">
+                <span>Você gastou R$ {{saldo.gastos}}</span>
+                <span> dia {{saldo.created_at}}</span>
+                <span>referente a {{saldo.descricao}}</span>
+            </li>
+        </ul>
     {% endfor %}
     <img src="{% static '/images/relatorio.png' %}" width="280px;"/>
     <a href="{% url 'accounts:user_logout' %}" style="text-decoration: none;">FAZER LOGOUT</a>

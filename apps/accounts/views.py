@@ -45,7 +45,7 @@ def index(request):
 
 @login_required(login_url='/login/')
 def relatorio(request):
-    total = Saldo.objects.all()
+    total = Saldo.objects.filter(id=request.user.id)
     template_name = 'relatorio_despesas.html'
     return render(request, template_name, {'total': total})
 
@@ -59,6 +59,7 @@ def user_logout(request):
 
 @login_required(login_url='/login/')
 def page_one(request):
+    user = Saldo.objects.filter(id=request.user.id)
     template_name = 'page-one.html'
     if request.method == 'POST':
         form = SaldoForm(request.POST)
@@ -66,4 +67,4 @@ def page_one(request):
             s = form.save()
             s.save()
             return redirect('accounts:page-one')
-    return render(request, template_name)
+    return render(request, template_name, {'total': user})

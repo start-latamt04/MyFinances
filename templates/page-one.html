@@ -22,14 +22,21 @@
 
             <form method="post">
                 {% csrf_token %}
-            <input id="id_saldo" name="saldo" step="0.01" type="number" placeholder="SALDO" style="margin-top: 5px;">
-            <button type="submit">ADICIONAR</button>
-            <input id="id_meta" name="meta" step="0.01" type="number" placeholder="META DE GASTOS">
-            <button type="submit">ADICIONAR</button>
-            <input id="id_gastos" name="gastos" step="0.01" type="number" placeholder="GASTOS">
-            <button type="submit">ADICIONAR</button>
-            <input id="id_descricao" name="descricao" type="text" placeholder="DESCRIÇÃO">
-            <button type="submit">ADICIONAR</button>
+                <div class="inputs">
+                    <input class="saldo" name="saldo" step="0.01" type="number" placeholder="SALDO" style="margin-top: 5px;">
+                    <button type="submit">ADICIONAR</button>
+                    <input id="meta" name="meta" step="0.01" type="number" placeholder="META DE GASTOS">
+                    <button type="submit">ADICIONAR</button>
+                    <input id="gastos" name="gastos" step="0.01" type="number" placeholder="GASTOS">
+                    <button type="submit">ADICIONAR</button>
+                    <input id="descricao" name="descricao" type="text" placeholder="DESCRIÇÃO">
+                    <button type="submit">ADICIONAR</button>
+                </div>
+                {% for saldo in total %}
+                            <span>{{saldo.saldo}}</span>
+                            <span>{{saldo.meta}}</span>
+                            <span>{{saldo.gastos}}</span>
+                {% endfor %}
             </form>
         </div>
 {% endblock %}
