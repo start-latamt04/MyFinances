@@ -1,11 +1,14 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
+
 {% load static %}
 
-{% block title%}MyFinances{% endblock%}
+    {% block link%}<link rel="stylesheet" href="{% static '/css/create.css' %}" type="text/css">{% endblock%}
+
+{% block title %}MyFinances{% endblock %}
 
 {% block content %}
 
-    <h1>Cadastre-se agora</h1>
+    <h1> <img src="{% static '/images/money-back64.png' %}" width="45px"/> MyFinances</h1>
 
     {% if messages %}
         {% for message in messages %}
@@ -40,9 +43,6 @@
         <button type="submit" id="log">Criar conta</button><br/>
         <a id="acesse" href="{% url 'accounts:user_login' %}">Fazer Login</a>
     </div>
-        {{ form.as_p }}
-        <button type="submit">Criar conta</button>
-        <a href="{% url 'accounts:user_login' %}">Fazer Login</a>
     </form>
 
 {% endblock %}

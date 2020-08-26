@@ -7,6 +7,15 @@ body{
     font-family: 'Arial';
 }
 
+h1 {
+    font-family: 'Bubblegum Sans', cursive, sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
 .login{
     width: 382px;
     overflow: hidden;
@@ -85,8 +94,5 @@ a {
 a:hover {
     color: #000000;
 }
-    margin-left: 110px;
 
-
-}
 

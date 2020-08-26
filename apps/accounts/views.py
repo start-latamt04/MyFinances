@@ -2,11 +2,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import *
-from .forms import UserForm, SaldoForm
 from .models import Saldo
-
-
-
 from .forms import UserForm, SaldoForm
 
 # Create your views here.
@@ -39,13 +35,12 @@ def user_login(request):
             return redirect('accounts:page-one')
         else:
             print('Deu ruim')
-
-    return render(request, template_name, {})
+    return render(request, template_name)
 
 
 def index(request):
     template_name = 'index.html'
-    return render(request, template_name, {})
+    return render(request, template_name)
 
 
 @login_required(login_url='/login/')
@@ -72,5 +67,3 @@ def page_one(request):
             s.save()
             return redirect('accounts:page-one')
     return render(request, template_name)
-
-

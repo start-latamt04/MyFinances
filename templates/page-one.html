@@ -2,7 +2,7 @@
 
 {% load static %}
 
-    {% block link%} <link rel="stylesheet" type="text/css" href="{% static '/css/page_one.css' %}"/>{% endblock %}
+    {% block link%}<link rel="stylesheet" type="text/css" href="{% static '/css/page_one.css' %}"/>{% endblock %}
 
 {% block title %}MyFinances{% endblock %}
 
@@ -12,11 +12,11 @@
             <hgroup>
                 <h1> <img src="{% static '/images/money-back64.png' %}" width="45px"/> MyFinances</h1>
             </hgroup>
-                <img id="foto1" src="/static/images/page_one.png" align="right">
+                <img id="foto1" src="{% static '/images/page_one.png' %}" align="right">
             </header>
             <nav id="menu">
                 <ul>
-                    <li><a href="{% url 'accounts:relatorio-despesas' %}">RELATÓRIO DE DESPESAS</a></li>
+                    <li><a href="{% url 'accounts:relatorio_despesas' %}">RELATÓRIO DE DESPESAS</a></li>
                 </ul>
             </nav>
 
