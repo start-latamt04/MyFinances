@@ -1,7 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
-from django.db.models import F, Sum
 from django.shortcuts import *
 from .models import Saldo
 from .forms import UserForm, SaldoForm
@@ -36,7 +35,7 @@ def user_login(request):
             login(request, user)
             return redirect('accounts:page-one')
         else:
-            print('Deu ruim')
+            messages.error(request, 'Usuario ou senha incorreto!')
     return render(request, template_name)
 
 
@@ -54,9 +53,12 @@ def relatorio(request):
 
 @login_required(login_url='/login/')
 def user_logout(request):
-    logout(request)
-    messages.success(request, 'Você saiu do sistema.')
-    return redirect('accounts:index')
+    if request.user.is_authenticated:
+        logout(request)
+        messages.success(request, 'Você saiu do sistema.')
+        return redirect('accounts:index')
+    else:
+        return redirect('accounts:login')
 
 
 @login_required(login_url='/login/')

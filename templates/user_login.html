@@ -7,10 +7,14 @@
 {% block title%}MyFinances{% endblock%}
 
 {% block content %}
+    <div class="title">
+        <h1> <img src="{% static '/images/money-back64.png' %}" width="45px"/> MyFinances</h1>
+    </div>
+
         <form action="." method="post" autocomplete="off" id="login">
             {% csrf_token %}
             <div class="login">
-                <h1>Login</h1>
+                <h2>Login</h2>
                 <label>Usuario:</label>
                 <input type="text" name="username" id="username" maxlength="100" placeholder="Usuário ou Email">
                 <label>Senha:</label>

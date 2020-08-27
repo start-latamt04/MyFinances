@@ -19,8 +19,17 @@ body{
 }
 
 
+.title h1 {
+    font-family: 'Bubblegum Sans', cursive, sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
 
-h1{
+
+h2{
     text-align: center;
     color: #ffffff;
     padding: 20px;
