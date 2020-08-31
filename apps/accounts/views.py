@@ -2,8 +2,11 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import *
-from .forms import UserForm, SaldoForm
 from .models import Saldo
+from .forms import UserForm, SaldoForm
+
+
+# Create your views here.
 
 
 def cadastro(request):
@@ -16,7 +19,12 @@ def cadastro(request):
             f.set_password(f.password)
             f.save()
             messages.success(request, 'Usuário cadastrado com sucesso.')
-            return redirect('accounts:index')
+            username = request.POST['username']
+            password = request.POST['password']
+            user = authenticate(request, username=username, password=password)
+            login(request, user)
+            Saldo.objects.create(saldo=0, meta=0, gastos=0, user=request.user).save()
+            return redirect('accounts:page-one')
     form = UserForm()
     context['form'] = form
     return render(request, template_name, context)
@@ -32,36 +40,46 @@ def user_login(request):
             login(request, user)
             return redirect('accounts:page-one')
         else:
-            print('Deu ruim')
-
-    return render(request, template_name, {})
+            messages.error(request, 'Usuario ou senha incorreto!')
+    return render(request, template_name)
 
 
 def index(request):
     template_name = 'index.html'
-    return render(request, template_name, {})
+    return render(request, template_name)
 
 
 @login_required(login_url='/login/')
 def relatorio(request):
-    total = Saldo.objects.all()
+    total = Saldo.objects.filter(id=request.user.id)
     template_name = 'relatorio_despesas.html'
     return render(request, template_name, {'total': total})
 
 
 @login_required(login_url='/login/')
 def user_logout(request):
-    logout(request)
-    messages.success(request, 'Você saiu do sistema.')
-    return redirect('accounts:index')
+    if request.user.is_authenticated:
+        logout(request)
+        messages.success(request, 'Você saiu do sistema.')
+        return redirect('accounts:index')
+    else:
+        return redirect('accounts:login')
 
 
 @login_required(login_url='/login/')
 def page_one(request):
+    saldo = get_object_or_404(Saldo, user_id=request.user.id)
+    form = SaldoForm(instance=saldo)
     template_name = 'page-one.html'
     if request.method == 'POST':
-        form = SaldoForm(request.POST)
+        form = SaldoForm(request.POST, instance=saldo)
+
         if form.is_valid():
-            form.save()
+            saldo = form.save(commit=False)
+            saldo.saldo = form.cleaned_data['saldo']
+            saldo.meta = form.cleaned_data['meta']
+            saldo.gastos = form.cleaned_data['gastos']
+            saldo.descricao = form.cleaned_data['descricao']
+            saldo.save()
             return redirect('accounts:page-one')
-    return render(request, template_name)
+    return render(request, template_name, {'form': form})

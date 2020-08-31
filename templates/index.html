@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
-    {%block link %}<link rel="stylesheet" type="text/css" href="{% static '/css/index.css' %}"/>{% endblock %}
+    {% block link%}<link rel="stylesheet" href="{% static '/css/index.css' %}" type="text/css">{% endblock%}
 
 {% block title %}MyFinances{% endblock %}
 
@@ -9,12 +8,12 @@
 <div id="interface">
     <header id="cabecalho">
     <hgroup>
-        <h1> <img src="static/images/money-back64.png" width="45px"/>MyFinances</h1>
+        <h1> <img src="{% static '/images/money-back64.png' %}" width="45px"/> MyFinances</h1>
         <h2>Controle seus gastos de forma simples<br>
         e rápida sem perder a paciência com o Excel.</h2>
     </hgroup>
     <center>
-        <img id="foto1" src="static/images/controle-gastos.png" align="right">
+        <img id="foto1" src="{% static '/images/controle-gastos.png' %}" align="right">
     </center>
     </header>
     <nav id="menu">

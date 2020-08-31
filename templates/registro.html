@@ -1,11 +1,15 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
+
 {% load static %}
 
-    {% block link %}<link rel="stylesheet" type="text/css" href="{% static '/css/create.css' %}"/>{% endblock %}
+    {% block link%}<link rel="stylesheet" href="{% static '/css/create.css' %}" type="text/css">{% endblock%}
 
-{% block title%}MyFinances{% endblock%}
+{% block title %}MyFinances{% endblock %}
 
 {% block content %}
+
+    <h1> <img src="{% static '/images/money-back64.png' %}" width="45px"/> MyFinances</h1>
+
     {% if messages %}
         {% for message in messages %}
             {{ message }}

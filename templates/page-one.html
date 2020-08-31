@@ -2,7 +2,7 @@
 
 {% load static %}
 
-    {% block link%} <link rel="stylesheet" type="text/css" href="{% static '/css/page_one.css' %}"/>{% endblock %}
+    {% block link%}<link rel="stylesheet" type="text/css" href="{% static '/css/page_one.css' %}"/>{% endblock %}
 
 {% block title %}MyFinances{% endblock %}
 
@@ -12,30 +12,25 @@
             <hgroup>
                 <h1> <img src="{% static '/images/money-back64.png' %}" width="45px"/> MyFinances</h1>
             </hgroup>
-                <img id="foto1" src="/static/images/page_one.png" align="right">
-            </header>
             <nav id="menu">
                 <ul>
-
                     <li><a href="{% url 'accounts:relatorio-despesas' %}">RELATÓRIO DE DESPESAS</a></li>
-
-                    <li style="margin-left: 270px; margin-top: 22px;"><a href="{% url 'accounts:relatorio-despesas' %}">RELATÓRIO DE DESPESAS</a></li>
-
                 </ul>
             </nav>
-
-            <form method="post">
+            </header>
+            <form method="POST" class="post-form">
                 {% csrf_token %}
-            <input id="id_saldo" name="saldo" step="0.01" type="number" placeholder="SALDO" style="margin-top: 5px;">
-            <button type="submit">ADICIONAR</button>
-            <input id="id_meta" name="meta" step="0.01" type="number" placeholder="META DE GASTOS">
-            <button type="submit">ADICIONAR</button>
-            <input id="id_gastos" name="gastos" step="0.01" type="number" placeholder="GASTOS">
-            <button type="submit">ADICIONAR</button>
-            <input id="id_descricao" name="descricao" type="text" placeholder="DESCRIÇÃO">
-            <button type="submit">ADICIONAR</button>
+                {{ form.as_p }}
+                <button type="submit" class="save btn btn-default">Save</button>
+                <div class="money">
+                {% for saldo in total %}
+                    <ul>
+                        <li class="s" id="s1"><b>Saldo atual:</b> <span>{{saldo.saldo}}</span></li>
+                        <li class="s" id="s2"><b>Meta:</b> <span>{{saldo.meta}}</span></li>
+                        <li class="s" id="s3"><b>Ultimo gasto:</b> <span>{{saldo.gastos}}</span></li>
+                    </ul>
+                {% endfor %}
+                </div>
             </form>
         </div>
-
-
 {% endblock %}

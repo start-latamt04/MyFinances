@@ -1,16 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block link%}<link rel="stylesheet" href="static/css/relatorio_despesas.css"/>{% endblock %}
 
-{% block content %}
-    <h2><img src="static/images/money-back64.png"> MyFinances</h2>
-    <h3>Relatório Mensal</h3>
-    {% block link%}<link rel="stylesheet" type="text/css" href="{% static '/css/relatorio.css' %}">{% endblock %}
+    {% block link%}<link rel="stylesheet" href="{%static '/css/relatorio.css' %}">{% endblock %}
 
 {% block title %}Myfinances{% endblock %}
 
 {% block content %}
-    <h2><img src="{% static '/images/money-back64.png' %}"> MyFinances</h2>
+    <h2><a href="/page-one"><img src="{% static '/images/money-back64.png' %}"></a> MyFinances</h2>
     {% csrf_token %}
 <div class="login">
     <select>
@@ -28,22 +24,13 @@
         <option value="12">Dezembro</option>
     </select>
     {% for saldo in total %}
-    <li class=gastos-item style="list-style: none;">
-        <span>Você gastou R$ {{saldo.gastos}}</span>
-        <span> dia {{saldo.created_at}}</span>
-        <span>referente a {{saldo.descricao}}</span>
-    </li>
-    {% endfor %}
-        <a href="{% url 'accounts:user_logout' %}">Fazer Logout</a>
-        <center>
-            <img id="foto1" src="/static/images/poupanca.png" align="right">
-        </center>
-    <ul>
-        <li class=gastos-item>
-            <span>Você gastou R$ {{saldo.gastos}}</span>
-            <span> dia {{saldo.created_at}}</span>
-        </li>
-    </ul>
+        <ul>
+            <li class=gastos-item style="list-style: none;">
+                <span>Você gastou R$ {{saldo.gastos}}</span>
+                <span> dia {{saldo.created_at}}</span>
+                <span>referente a {{saldo.descricao}}</span>
+            </li>
+        </ul>
     {% endfor %}
     <img src="{% static '/images/relatorio.png' %}" width="280px;"/>
     <a href="{% url 'accounts:user_logout' %}" style="text-decoration: none;">FAZER LOGOUT</a>

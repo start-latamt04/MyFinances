@@ -19,7 +19,17 @@ body{
 }
 
 
-h1{
+.title h1 {
+    font-family: 'Bubblegum Sans', cursive, sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+
+h2{
     text-align: center;
     color: #ffffff;
     padding: 20px;
@@ -27,9 +37,14 @@ h1{
     font-family: 'Bubblegum Sans', cursive, sans-serif;
 }
 
+label{
+    color: #ffffff;
+    font-size: 17px;
+}
 
-#username {
-    width: 280px;
+
+#username{
+    width: 300px;
     height: 30px;
     border: none;
     border-radius: 3px;
@@ -38,7 +53,7 @@ h1{
 
 
 #password{
-    width: 280px;
+    width: 300px;
     height: 30px;
     margin-top: 10px;
     margin-left: 8px;

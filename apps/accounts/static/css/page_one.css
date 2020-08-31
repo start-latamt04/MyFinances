@@ -27,7 +27,7 @@ header#cabecalho img#foto1 {
     width: 640px;
     position: absolute;
     left: -50px;
-    top: 250px;
+    top: 340px;
 }
 
 nav#menu li {
@@ -69,4 +69,53 @@ header#cabecalho h2 {
     padding: 0px;
     margin-top: 20px;
     margin-left: 25px;
+}
+
+
+.money {
+    display: inline;
+}
+ div ul li.s {
+    margin-top: 25px;
+    margin-left: -40px;
+    display: inline-block;
+    width: 180px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #dddddd;
+    background-color: #9BDC90;
+}
+
+div ul li#s2 {
+    margin-left: 5px;
+}
+
+div ul li#s3 {
+    margin-left: 5px;
+}
+
+.saldo {
+    display: inline;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.metas {
+    display: inline;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.gastos {
+    margin-top: 20px;
+    display: flex;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.desc {
+    display: flex;
+    width: 100px;
+    margin-left: 275px;
+    margin-top: -20px;
 }

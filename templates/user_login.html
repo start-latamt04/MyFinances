@@ -1,15 +1,23 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
     {% block link%}<link rel="stylesheet" href="{% static '/css/login.css' %}" type="text/css">{% endblock%}
 
 {% block title%}MyFinances{% endblock%}
 
 {% block content %}
+    {% if form.errors %}
+    <p>Login ou senha incorreto. Por favor, tente novamente.</p>
+    {% endif %}
+    <div class="title">
+        <h1> <img src="{% static '/images/money-back64.png' %}" width="45px"/> MyFinances</h1>
+    </div>
+
         <form action="." method="post" autocomplete="off" id="login">
             {% csrf_token %}
             <div class="login">
-                <h1>Login</h1>
+                <h2>Login</h2>
                 <label>Usuario:</label>
                 <input type="text" name="username" id="username" maxlength="100" placeholder="Usuário ou Email">
                 <label>Senha:</label>

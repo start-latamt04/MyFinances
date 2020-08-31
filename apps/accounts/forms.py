@@ -12,7 +12,6 @@ class UserForm(forms.ModelForm):
         fields = ['first_name', 'username', 'email', 'password']
 
 
-# criação de form para saldo/gasto
 
 class SaldoForm(forms.ModelForm):
 
@@ -20,6 +19,3 @@ class SaldoForm(forms.ModelForm):
         model = Saldo
 
         fields = ['saldo', 'meta', 'gastos', 'descricao']
-
-        fields = ['saldo', 'meta', 'gastos']
-
