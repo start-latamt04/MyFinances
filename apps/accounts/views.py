@@ -19,7 +19,12 @@ def cadastro(request):
             f.set_password(f.password)
             f.save()
             messages.success(request, 'Usuário cadastrado com sucesso.')
-            return redirect('accounts:index')
+            username = request.POST['username']
+            password = request.POST['password']
+            user = authenticate(request, username=username, password=password)
+            login(request, user)
+            Saldo.objects.create(saldo=0, meta=0, gastos=0, user=request.user).save()
+            return redirect('accounts:page-one')
     form = UserForm()
     context['form'] = form
     return render(request, template_name, context)
@@ -63,12 +68,18 @@ def user_logout(request):
 
 @login_required(login_url='/login/')
 def page_one(request):
-    user = Saldo.objects.filter(id=request.user.id)
+    saldo = get_object_or_404(Saldo, user_id=request.user.id)
+    form = SaldoForm(instance=saldo)
     template_name = 'page-one.html'
     if request.method == 'POST':
-        form = SaldoForm(request.POST)
+        form = SaldoForm(request.POST, instance=saldo)
+
         if form.is_valid():
-            s = form.save()
-            s.save()
+            saldo = form.save(commit=False)
+            saldo.saldo = form.cleaned_data['saldo']
+            saldo.meta = form.cleaned_data['meta']
+            saldo.gastos = form.cleaned_data['gastos']
+            saldo.descricao = form.cleaned_data['descricao']
+            saldo.save()
             return redirect('accounts:page-one')
-    return render(request, template_name, {'total': user})
+    return render(request, template_name, {'form': form})

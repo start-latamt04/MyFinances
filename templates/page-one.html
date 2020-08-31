@@ -12,32 +12,16 @@
             <hgroup>
                 <h1> <img src="{% static '/images/money-back64.png' %}" width="45px"/> MyFinances</h1>
             </hgroup>
-                <img id="foto1" src="{% static '/images/page_one.png' %}" align="right">
-            </header>
             <nav id="menu">
                 <ul>
                     <li><a href="{% url 'accounts:relatorio_despesas' %}">RELATÓRIO DE DESPESAS</a></li>
                 </ul>
             </nav>
-
-            <form method="post">
+            </header>
+            <form method="POST" class="post-form">
                 {% csrf_token %}
-                <div class="saldo">
-                    <input name="saldo" step="0.01" type="number" placeholder="SALDO" style="margin-top: 5px;">
-                    <button type="submit">ADICIONAR</button>
-                </div>
-                <div class="metas">
-                    <input name="meta" step="0.01" type="number" placeholder="META DE GASTOS">
-                    <button type="submit">ADICIONAR</button>
-                </div>
-                <div class="gastos">
-                    <input name="gastos" step="0.01" type="number" placeholder="GASTOS">
-                    <button type="submit">ADICIONAR</button>
-                </div>
-                <div class="desc">
-                    <input name="descricao" type="text" placeholder="DESCRIÇÃO" autocomplete="off">
-                    <button type="submit">ADICIONAR</button>
-                </div>
+                {{ form.as_p }}
+                <button type="submit" class="save btn btn-default">Save</button>
                 <div class="money">
                 {% for saldo in total %}
                     <ul>
