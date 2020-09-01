@@ -1,6 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
+from django.db.models import F
 from django.shortcuts import *
 from .models import Saldo
 from .forms import UserForm, SaldoForm
@@ -51,7 +52,7 @@ def index(request):
 
 @login_required(login_url='/login/')
 def relatorio(request):
-    total = Saldo.objects.filter(id=request.user.id)
+    total = Saldo.objects.filter(user_id=request.user.id)
     template_name = 'relatorio_despesas.html'
     return render(request, template_name, {'total': total})
 
@@ -71,9 +72,9 @@ def page_one(request):
     saldo = get_object_or_404(Saldo, user_id=request.user.id)
     form = SaldoForm(instance=saldo)
     template_name = 'page-one.html'
+
     if request.method == 'POST':
         form = SaldoForm(request.POST, instance=saldo)
-
         if form.is_valid():
             saldo = form.save(commit=False)
             saldo.saldo = form.cleaned_data['saldo']
@@ -81,5 +82,6 @@ def page_one(request):
             saldo.gastos = form.cleaned_data['gastos']
             saldo.descricao = form.cleaned_data['descricao']
             saldo.save()
+            Saldo.objects.filter(user_id=request.user.id).update(saldo=F('saldo') - F('gastos'))
             return redirect('accounts:page-one')
     return render(request, template_name, {'form': form})
