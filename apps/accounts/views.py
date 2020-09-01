@@ -24,7 +24,7 @@ def cadastro(request):
             password = request.POST['password']
             user = authenticate(request, username=username, password=password)
             login(request, user)
-            Saldo.objects.create(saldo=0, meta=0, gastos=0, user=request.user).save()
+            Saldo.objects.create(saldo=0, meta=0, gastos=0, total_gastos=0, user=request.user).save()
             return redirect('accounts:page-one')
     form = UserForm()
     context['form'] = form
@@ -83,5 +83,6 @@ def page_one(request):
             saldo.descricao = form.cleaned_data['descricao']
             saldo.save()
             Saldo.objects.filter(user_id=request.user.id).update(saldo=F('saldo') - F('gastos'))
+            Saldo.objects.filter(user_id=request.user.id).update(total_gastos=F('total_gastos') + F('gastos'))
             return redirect('accounts:page-one')
     return render(request, template_name, {'form': form})
