@@ -26,9 +26,9 @@
     {% for saldo in total %}
         <ul>
             <li class=gastos-item style="list-style: none;">
-                <span>Você gastou R$ {{saldo.gastos}}</span>
-                <span> dia {{saldo.created_at}}</span>
-                <span>referente a {{saldo.descricao}}</span>
+                <span><b>TOTAL GASTOS:</b> R${{saldo.total_gastos}}</span><br><br>
+                <span><b>Data último gasto:</b> {{saldo.created_at}}</span><br><br>
+                <span><b>referente a</b> {{saldo.descricao}}</span>
             </li>
         </ul>
     {% endfor %}
