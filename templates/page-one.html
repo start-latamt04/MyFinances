@@ -22,15 +22,6 @@
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button type="submit" class="save btn btn-default">Save</button>
-                <div class="money">
-                {% for saldo in total %}
-                    <ul>
-                        <li class="s" id="s1"><b>Saldo atual:</b> <span>{{saldo.saldo}}</span></li>
-                        <li class="s" id="s2"><b>Meta:</b> <span>{{saldo.meta}}</span></li>
-                        <li class="s" id="s3"><b>Ultimo gasto:</b> <span>{{saldo.gastos}}</span></li>
-                    </ul>
-                {% endfor %}
-                </div>
             </form>
         </div>
 {% endblock %}
