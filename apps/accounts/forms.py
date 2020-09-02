@@ -19,3 +19,4 @@ class SaldoForm(forms.ModelForm):
     class Meta:
         model = Saldo
         fields = ['saldo', 'meta', 'gastos', 'descricao']
+
