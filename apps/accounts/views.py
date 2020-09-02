@@ -52,9 +52,15 @@ def index(request):
 
 @login_required(login_url='/login/')
 def relatorio(request):
-    total = Saldo.objects.filter(user_id=request.user.id)
+    meses = ('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho',
+             'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro')
+    total = Saldo.objects.filter(created_at__range=["2020-09-01", "2020-09-30"])
+    context = {
+        'total': total,
+        'meses': meses,
+    }
     template_name = 'relatorio_despesas.html'
-    return render(request, template_name, {'total': total})
+    return render(request, template_name, context)
 
 
 @login_required(login_url='/login/')
