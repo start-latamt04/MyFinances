@@ -14,23 +14,14 @@
             </hgroup>
             <nav id="menu">
                 <ul>
-                    <li><a href="{% url 'accounts:relatorio-despesas' %}">RELATÓRIO DE DESPESAS</a></li>
+                    <li><a href="{% url 'accounts:relatorio_despesas' %}">RELATÓRIO DE DESPESAS</a></li>
                 </ul>
             </nav>
             </header>
             <form method="POST" class="post-form">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button type="submit" class="save btn btn-default">Save</button>
-                <div class="money">
-                {% for saldo in total %}
-                    <ul>
-                        <li class="s" id="s1"><b>Saldo atual:</b> <span>{{saldo.saldo}}</span></li>
-                        <li class="s" id="s2"><b>Meta:</b> <span>{{saldo.meta}}</span></li>
-                        <li class="s" id="s3"><b>Ultimo gasto:</b> <span>{{saldo.gastos}}</span></li>
-                    </ul>
-                {% endfor %}
-                </div>
+                <button type="submit" class="save btn btn-default">Salvar</button>
             </form>
         </div>
 {% endblock %}

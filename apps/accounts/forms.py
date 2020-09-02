@@ -12,7 +12,6 @@ class UserForm(forms.ModelForm):
         fields = ['first_name', 'username', 'email', 'password']
 
 
-
 class SaldoForm(forms.ModelForm):
 
     class Meta:

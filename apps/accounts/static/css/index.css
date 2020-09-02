@@ -54,7 +54,6 @@ nav#menu a:hover {
     text-decoration: none;
 }
 
-}
 
 header#cabecalho h1 {
     font-family: 'Bubblegum Sans', cursive, sans-serif;
@@ -68,7 +67,7 @@ header#cabecalho h1 {
 header#cabecalho h2 {
     font-family: 'Titillium Web', sans-serif;
     color: #888888;
-    font-size: 15pt
+    font-size: 15pt;
     padding: 0px;
     margin-top: 20px;
     margin-left: 25px;
