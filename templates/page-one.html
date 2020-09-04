@@ -17,11 +17,12 @@
                     <li><a href="{% url 'accounts:relatorio_despesas' %}">RELATÓRIO DE DESPESAS</a></li>
                 </ul>
             </nav>
+                 <img id="foto1" src="{% static '/images/page_one.png' %}">
             </header>
             <form method="POST" class="post-form">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button type="submit" class="save btn btn-default">Salvar</button>
+                <button type="submit" class="save btn btn-default">SALVAR</button>
             </form>
         </div>
 {% endblock %}

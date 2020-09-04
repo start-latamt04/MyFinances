@@ -6,7 +6,8 @@
 {% block title %}Myfinances{% endblock %}
 
 {% block content %}
-    <h2><a href="/page-one"><img src="{% static '/images/money-back64.png' %}"></a> MyFinances</h2>
+    <h2><a href="/page-one"><img src="{% static '/images/money-back64.png' %}" width="45px;" style="margin-left: 5px;
+ margin-top: 5px;"></a> MyFinances</h2>
     {% csrf_token %}
 <div class="login">
     <select name="anome" id="anome">
