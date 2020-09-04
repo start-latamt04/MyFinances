@@ -47,6 +47,8 @@ def user_login(request):
 
 def index(request):
     template_name = 'index.html'
+    if request.user.is_authenticated:
+        return redirect('accounts:page-one')
     return render(request, template_name)
 
 

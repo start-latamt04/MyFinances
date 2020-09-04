@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import Saldo
 
-# Register your models here.
+
+class SaldoAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Saldo, SaldoAdmin)

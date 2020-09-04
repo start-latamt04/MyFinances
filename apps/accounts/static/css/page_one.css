@@ -24,10 +24,10 @@ nav#menu ul {
 }
 
 header#cabecalho img#foto1 {
-    width: 640px;
+    width: 500px;
     position: absolute;
-    left: -50px;
-    top: 340px;
+    left: -65px;
+    top: 460px;
 }
 
 nav#menu li {
@@ -35,7 +35,7 @@ nav#menu li {
     text-align: center;
     width: 190pt;
     padding: 10px;
-    margin: 30px;
+    margin-left: -250px;
     -webkit-transition: background-color 1s;
     -moz-transition: background-color 1s;
     -ms-transition: background-color 1s;
@@ -71,11 +71,7 @@ header#cabecalho h2 {
     margin-left: 25px;
 }
 
-
-.money {
-    display: inline;
-}
- div ul li.s {
+div ul li.s {
     margin-top: 25px;
     margin-left: -40px;
     display: inline-block;
@@ -86,36 +82,18 @@ header#cabecalho h2 {
     background-color: #9BDC90;
 }
 
-div ul li#s2 {
-    margin-left: 5px;
+form button {
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    background-color: #9BDC90;
+    color: #000000;
+    margin-left: 85px;
 }
 
-div ul li#s3 {
-    margin-left: 5px;
-}
-
-.saldo {
-    display: inline;
-    width: 100px;
-    margin-left: 10px;
-}
-
-.metas {
-    display: inline;
-    width: 100px;
-    margin-left: 10px;
-}
-
-.gastos {
-    margin-top: 20px;
-    display: flex;
-    width: 100px;
-    margin-left: 10px;
-}
-
-.desc {
-    display: flex;
-    width: 100px;
-    margin-left: 275px;
-    margin-top: -20px;
+form button:hover {
+    color: #ffffff;
+    background-color: #606060;
 }
