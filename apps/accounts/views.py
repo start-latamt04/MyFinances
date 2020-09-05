@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
@@ -56,7 +58,12 @@ def index(request):
 def relatorio(request):
     meses = ('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho',
              'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro')
-    total = Saldo.objects.filter(created_at__range=["2020-09-01", "2020-09-30"])
+    total = Saldo.objects.filter(user_id=request.user.id)
+    '''total = Saldo.objects.filter(created_at__range=["2020-09-01", "2020-09-30"])'''
+    data = datetime.now()
+    dia = data.strftime("%d")
+    if str(dia) == '01':
+        Saldo.objects.filter(user_id=request.user.id).update(saldo=0, meta=0, descricao='', gastos=0, total_gastos=0)
     context = {
         'total': total,
         'meses': meses,
