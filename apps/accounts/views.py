@@ -44,6 +44,7 @@ def user_login(request):
             return redirect('accounts:page-one')
         else:
             messages.error(request, 'Usuario ou senha incorreto!')
+            return redirect('accounts:user_login')
     return render(request, template_name)
 
 
@@ -79,7 +80,8 @@ def user_logout(request):
         messages.success(request, 'Você saiu do sistema.')
         return redirect('accounts:index')
     else:
-        return redirect('accounts:login')
+        messages.error(request, 'Você precisa estar logado!')
+        return redirect('accounts:user_login')
 
 
 @login_required(login_url='/login/')
