@@ -10,17 +10,39 @@
  margin-top: 5px;"></a> MyFinances</h2>
     {% csrf_token %}
 <div class="login">
-    <select name="anome" id="anome">
-            {% for mes in meses %}
-                <option value="meses">{{ mes }}</option>
-            {% endfor %}
-            </select>
+         <form role="form" method='post' action="{% url 'accounts:relatorio_despesas' %}">
+             {% csrf_token %}
+             <tr>
+                 <td><select name="meses">
+
+                    <option value="1">Janeiro</option>
+                    <option value="2">Fevereiro</option>
+                    <option value="3">Março</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Maio</option>
+                    <option value="6">Junho</option>
+                    <option value="7">Julho</option>
+                    <option value="8">Agosto</option>
+                    <option selected value="9">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                     </select></td>
+                  <td><select name="year">
+                    <option selected value="2020">2020</option>
+                    <option value="2021">2021</option>
+                 </select></td>
+            <td>
+            <input type='submit' value='Procurar'/>
+            </td>
+             </tr>
+            </form>
     {% for saldo in total %}
         <ul>
             <li class=gastos-item style="list-style: none;">
                 <span><b>TOTAL GASTOS:</b> R${{saldo.total_gastos}}</span><br><br>
                 <span><b>Data último gasto:</b> {{saldo.created_at}}</span><br><br>
-                <span><b>Desc último gasto:</b> {{saldo.descricao}}</span><br><br>
+                <span><b>Descrição último gasto:</b> {{saldo.descricao}}</span><br><br>
             </li>
         </ul>
     {% endfor %}

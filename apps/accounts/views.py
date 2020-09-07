@@ -57,17 +57,21 @@ def index(request):
 
 @login_required(login_url='/login/')
 def relatorio(request):
-    meses = ('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho',
-             'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro')
-    total = Saldo.objects.filter(user_id=request.user.id)
-    '''total = Saldo.objects.filter(created_at__range=["2020-09-01", "2020-09-30"])'''
+    if request.method == 'POST':
+        month = request.POST.get('meses')
+        year = request.POST.get('year')
+        total = Saldo.objects.filter(user_id=request.user.id, created_at__month=month, created_at__year=year)
+    else:
+        data = datetime.now()
+        mes = data.month
+        ano = data.year
+        total = Saldo.objects.filter(user_id=request.user.id, created_at__month=mes, created_at__year=ano)
     data = datetime.now()
     dia = data.strftime("%d")
     if str(dia) == '01':
         Saldo.objects.filter(user_id=request.user.id).update(saldo=0, meta=0, descricao='', gastos=0, total_gastos=0)
     context = {
         'total': total,
-        'meses': meses,
     }
     template_name = 'relatorio_despesas.html'
     return render(request, template_name, context)

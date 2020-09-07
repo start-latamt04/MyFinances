@@ -53,6 +53,19 @@ ul li:hover {
     color: #BC0000;
 }
 
+.login input {
+    position: relative;
+    top: -60px;
+    margin-left: -25px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    background-color: #dddddd;
+    color: #000000;
+}
+
 .login img {
     position: relative;
     margin-left: 300px;
