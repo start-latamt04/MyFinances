@@ -70,8 +70,12 @@ def relatorio(request):
     dia = data.strftime("%d")
     if str(dia) == '01':
         Saldo.objects.filter(user_id=request.user.id).update(saldo=0, meta=0, descricao='', gastos=0, total_gastos=0)
+
+    res = Saldo.objects.get(user_id=request.user.id)
     context = {
         'total': total,
+        'res': res,
+        'dia': dia,
     }
     template_name = 'relatorio_despesas.html'
     return render(request, template_name, context)
