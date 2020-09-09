@@ -82,3 +82,30 @@ ul li:hover {
 .login a:hover {
     color:  #BC0000;
 }
+
+.login p#fail{
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    color: #B90000;
+    top: 90px;
+    left: 60px;
+}
+
+.login p#ok{
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    color: #B9006F;
+    top: 90px;
+    left: 50px;
+}
+
+.login p#sucess{
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    color: #0400B9;
+    top: 90px;
+    left: 60px;
+}

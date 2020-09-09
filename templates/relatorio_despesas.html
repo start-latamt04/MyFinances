@@ -28,6 +28,7 @@
                     <option value="11">Novembro</option>
                     <option value="12">Dezembro</option>
                      </select></td>
+
                   <td><select name="year">
                     <option selected value="2020">2020</option>
                     <option value="2021">2021</option>
@@ -46,6 +47,15 @@
             </li>
         </ul>
     {% endfor %}
+    {% if res.total_gastos > res.meta and dia == '28' %}
+        <p id="fail">Você ultrapassou a meta este mês! :(</p>
+    {% endif %}
+    {% if res.total_gastos == res.meta and dia == '28' %}
+        <p id="ok">Você atingiu exatamente a meta esperada!</p>
+    {% endif %}
+    {% if res.total_gastos < res.meta and dia == '28' %}
+        <p id="sucess">Você ficou abaixo da meta, Parabéns!!</p>
+    {% endif %}
     <img src="{% static '/images/relatorio.png' %}" width="280px;"/>
     <a href="{% url 'accounts:user_logout' %}" style="text-decoration: none;">FAZER LOGOUT</a>
 </div>
