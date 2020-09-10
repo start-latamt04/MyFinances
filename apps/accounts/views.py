@@ -3,6 +3,7 @@ from datetime import datetime
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import AuthenticationForm
 from django.db.models import F
 from django.shortcuts import *
 from .models import Saldo
@@ -37,6 +38,7 @@ def cadastro(request):
 def user_login(request):
     template_name = 'user_login.html'
     if request.method == 'POST':
+        form = AuthenticationForm(request.POST)
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
@@ -46,7 +48,9 @@ def user_login(request):
         else:
             messages.error(request, 'Usuario ou senha incorreto!')
             return redirect('accounts:user_login')
-    return render(request, template_name)
+    else:
+        form = AuthenticationForm()
+    return render(request, template_name, {'form': form})
 
 
 def index(request):

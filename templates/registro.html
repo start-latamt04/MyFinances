@@ -20,23 +20,23 @@
         {{ form.non_field_errors }}
     <div class="login">
         <h2>CADASTRE - SE</h2>
+        {{ form.email.errors }}
+        {{ form.first_name.errors }}
+        {{ form.username.errors }}
+        {{ form.password.errors }}
         <div id="first_name">
-            {{ form.first_name.errors }}
             <label for="{{ form.fist_name.id_for_label }}">Nome: </label>
             {{ form.first_name }}
         </div>
         <div id="username">
-            {{ form.username.errors }}
             <label for="{{ form.username.id_for_label }}">Usuario: </label>
             {{ form.username }}
         </div>
         <div id="email">
-            {{ form.email.errors }}
             <label for="{{ form.email.id_for_label }}">Email: </label>
             {{ form.email }}
         </div>
         <div id="Pass">
-            {{ form.password.errors }}
             <label for="{{ form.password.id_for_label }}">Senha: </label>
             {{ form.password }}
         </div>
