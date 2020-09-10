@@ -28,7 +28,8 @@ def cadastro(request):
             login(request, user)
             Saldo.objects.create(saldo=0, meta=0, gastos=0, total_gastos=0, user=request.user).save()
             return redirect('accounts:page-one')
-    form = UserForm()
+    else:
+        form = UserForm()
     context['form'] = form
     return render(request, template_name, context)
 
