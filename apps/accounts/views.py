@@ -46,7 +46,7 @@ def user_login(request):
             login(request, user)
             return redirect('accounts:page-one')
         else:
-            messages.error(request, 'Usuario ou senha incorreto!')
+            messages.error(request, 'Usuario ou Senha incorreto!')
             return redirect('accounts:user_login')
     else:
         form = AuthenticationForm()

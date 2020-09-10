@@ -89,3 +89,10 @@ a {
 a:hover {
     color: #000000;
 }
+
+.alert {
+    position: relative;
+    font-weight: bold;
+    left: 100px;
+    top: -15px;
+}

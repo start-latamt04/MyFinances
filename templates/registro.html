@@ -20,10 +20,12 @@
         {{ form.non_field_errors }}
     <div class="login">
         <h2>CADASTRE - SE</h2>
-        {{ form.email.errors }}
-        {{ form.first_name.errors }}
-        {{ form.username.errors }}
-        {{ form.password.errors }}
+        <div class="errors">
+            {{ form.email.errors }}
+            {{ form.first_name.errors }}
+            {{ form.username.errors }}
+            {{ form.password.errors }}
+        </div>
         <div id="first_name">
             <label for="{{ form.fist_name.id_for_label }}">Nome: </label>
             {{ form.first_name }}
