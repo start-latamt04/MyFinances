@@ -22,7 +22,6 @@ def cadastro(request):
             f = form.save()
             f.set_password(f.password)
             f.save()
-            messages.success(request, 'Usuário cadastrado com sucesso.')
             username = request.POST['username']
             password = request.POST['password']
             user = authenticate(request, username=username, password=password)
@@ -90,10 +89,8 @@ def relatorio(request):
 def user_logout(request):
     if request.user.is_authenticated:
         logout(request)
-        messages.success(request, 'Você saiu do sistema.')
         return redirect('accounts:index')
     else:
-        messages.error(request, 'Você precisa estar logado!')
         return redirect('accounts:user_login')
 
 

@@ -47,13 +47,13 @@
             </li>
         </ul>
     {% endfor %}
-    {% if res.total_gastos > res.meta and dia == '28' %}
+    {% if res.total_gastos > res.meta and dia == '10' %}
         <p id="fail">Você ultrapassou a meta este mês! :(</p>
     {% endif %}
-    {% if res.total_gastos == res.meta and dia == '28' %}
+    {% if res.total_gastos == res.meta and dia == '10' %}
         <p id="ok">Você atingiu exatamente a meta esperada!</p>
     {% endif %}
-    {% if res.total_gastos < res.meta and dia == '28' %}
+    {% if res.total_gastos < res.meta and dia == '10' %}
         <p id="sucess">Você ficou abaixo da meta, Parabéns!!</p>
     {% endif %}
     <img src="{% static '/images/relatorio.png' %}" width="280px;"/>
