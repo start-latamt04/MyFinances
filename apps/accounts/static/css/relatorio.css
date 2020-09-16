@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 
 body{
+    width: 100%;
     margin: 0;
     padding: 0;
     background-color:#dddddd;
