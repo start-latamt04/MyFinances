@@ -2,7 +2,10 @@
 
 {% load static %}
 
-    {% block link%}<link rel="stylesheet" type="text/css" href="{% static '/css/page_one.css' %}"/>{% endblock %}
+    {% block link%}
+        <link rel="stylesheet" type="text/css" href="{% static '/css/page_one.css' %}"/>
+        <link rel="stylesheet" media="only screen and (max-width: 640px)" href="{% static '/css/page_one_mobile.css' %}" type="text/css"/>
+    {% endblock %}
 
 {% block title %}MyFinances{% endblock %}
 {% block content %}
@@ -11,14 +14,14 @@
             <hgroup>
                 <h1> <img src="{% static '/images/money-back64.png' %}" width="45px"/> MyFinances</h1>
             </hgroup>
-            <nav id="menu">
+            <div id="menu">
                 <ul>
                     <li><a href="{% url 'accounts:relatorio_despesas' %}">RELATÓRIO DE DESPESAS</a></li>
                 </ul>
-            </nav>
+            </div>
                  <img id="foto1" src="{% static '/images/page_one.png' %}">
             </header>
-            <form method="POST" class="post-form">
+            <form method="POST" class="form">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button type="submit" class="save btn btn-default">SALVAR</button>

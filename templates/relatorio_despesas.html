@@ -50,16 +50,16 @@
             </li>
         </ul>
     {% endfor %}
-    {% if res.total_gastos > res.meta and dia == '22' %}
-        <p id="fail">Você ultrapassou a meta este mês! :(</p>
+    {% if res.total_gastos > res.meta and dia == '28' %}
+        <p id="fail">Você ultrapassou a meta este mês!</p>
     {% endif %}
-    {% if res.total_gastos == res.meta and dia == '22' %}
+    {% if res.total_gastos == res.meta and dia == '28' %}
         <p id="ok">Você atingiu exatamente a meta esperada!</p>
     {% endif %}
-    {% if res.total_gastos < res.meta and dia == '22' %}
+    {% if res.total_gastos < res.meta and dia == '28' %}
         <p id="sucess">Você ficou abaixo da meta, Parabéns!!</p>
     {% endif %}
-    <img src="{% static '/images/relatorio.png' %}" width="280px;"/>
+    <img src="{% static '/images/relatorio.png' %}"/>
     <a href="{% url 'accounts:user_logout' %}" style="text-decoration: none;">FAZER LOGOUT</a>
 </div>
 {% endblock %}

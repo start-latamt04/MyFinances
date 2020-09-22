@@ -2,41 +2,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 
 body {
-    width: 100%;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     background-color: #dddddd;
 }
 
-nav#menu {
+div#menu {
     display: block;
 }
 
-nav#menu li:hover {
+div#menu li:hover {
     background-color: #606060;
 }
 
-nav#menu ul {
+div#menu ul {
     list-style: none;
     text-transform: uppercase;
     position: relative;
     top: 67px;
-    left: 750px;
 
 }
 
 header#cabecalho img#foto1 {
-    width: 530px;
+    width: 300px;
     position: absolute;
-    left: -65px;
-    top: 455px;
+    left: 20px;
+    top: 417px;
 }
 
-nav#menu li {
+div#menu li {
+    position: relative;
     background-color: #9BDC90;
     text-align: center;
-    width: 190pt;
+    width: 170pt;
     padding: 10px;
-    margin-left: -250px;
+    top: -30px;
+    left: -25px;
     -webkit-transition: background-color 1s;
     -moz-transition: background-color 1s;
     -ms-transition: background-color 1s;
@@ -44,12 +46,12 @@ nav#menu li {
     transition: background-color 1s;
 }
 
-nav#menu a {
+div#menu a {
     color: #000000;
     text-decoration: none;
 }
 
-nav#menu a:hover {
+div#menu a:hover {
     color: #ffffff;
     text-decoration: none;
 }
@@ -72,19 +74,10 @@ header#cabecalho h2 {
     margin-left: 25px;
 }
 
-div ul li.s {
-    margin-top: 25px;
-    margin-left: -40px;
-    display: inline-block;
-    width: 180px;
-    height: 30px;
-    padding: 5px;
-    border: 1px solid #dddddd;
-    background-color: #9BDC90;
-}
-
 .form button {
-    width: 200px;
+    position: relative;
+    top: 85px;
+    width: 150px;
     height: 30px;
     border: none;
     border-radius: 17px;
@@ -97,4 +90,24 @@ div ul li.s {
 .form button:hover {
     color: #ffffff;
     background-color: #606060;
+}
+
+.form label {
+    position: relative;
+    top: 80px;
+    left: 10px
+}
+
+.form input {
+    position: relative;
+    top: 80px;
+    left: 10px;
+}
+
+.form textarea {
+    width: 160px;
+    height: 50px;
+    position: relative;
+    top: 90px;
+    left: 10px;
 }
