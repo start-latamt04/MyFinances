@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#dddddd;
+    font-family: 'Arial';
+}
+
+h1 {
+    font-family: 'Bubblegum Sans', cursive, sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.login{
+    width: 230px;
+    overflow: hidden;
+    margin-left: 15px;
+    margin-top: 50px;
+    padding: 50px;
+    background: #B298FB;
+    border-radius: 15px ;
+}
+
+h2{
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+    margin-top: 10px;
+    font-family: 'Bubblegum Sans', cursive, sans-serif;
+}
+
+#first_name {
+    width: 190px;
+    height: 30px;
+    margin-left: 40px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+#username {
+    width: 190px;
+    height: 30px;
+    margin-left: 40px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+#email {
+    width: 190px;
+    height: 30px;
+    margin-left: 40px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+#Pass {
+    width: 190px;
+    height: 30px;
+    margin-left: 40px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+#log{
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    background-color: #9BDC90;
+    color: #ffffff;
+    margin-top: 30px;
+    margin-left: 65px;
+}
+
+a {
+    position: relative;
+    background-color: #b298fb;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: -40px;
+    bottom: -40px;
+}
+
+
+a:hover {
+    color: #000000;
+}
+
+div#first_name label {
+    position: relative;
+    left: -60px;
+    top: 20px;
+}
+
+div#username label {
+    position: relative;
+    left: -60px;
+    top: 20px;
+}
+
+div#email label {
+    position: relative;
+    left: -60px;
+    top: 20px;
+}
+
+div#Pass label {
+    position: relative;
+    left: -60px;
+    top: 20px;
+}

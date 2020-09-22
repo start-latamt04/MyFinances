@@ -1,4 +1,5 @@
 {% load static %}
+{% load bootstrap4 %}
 
 <html lang="pt-br">
 <head>
@@ -8,7 +9,7 @@
     <link rel="shortcut icon" href="{% static '/images/money-back.png' %}" type="image/x-png"/>
     <title>{% block title %}{% endblock %}</title>
 </head>
-<body style="max-width: 50%;">
+<body style="width: 100%;">
 {% block content %}
 {% endblock %}
 </body>

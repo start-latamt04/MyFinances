@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
+{% load bootstrap4 %}
 
 {% load static %}
 
-    {% block link%}<link rel="stylesheet" href="{% static '/css/create.css' %}" type="text/css">{% endblock%}
+    {% block link %}<link rel="stylesheet" href="{% static '/css/create.css' %}" type="text/css">
+                    <link rel="stylesheet" media="only screen and (max-width: 640px)" href="{% static '/css/create_mobile.css' %}" type="text/css"/>
+    {% endblock%}
 
 {% block title %}MyFinances{% endblock %}
 
@@ -15,7 +18,7 @@
             {{ message }}
         {% endfor %}
     {% endif %}
-    <form action="." method="post" autocomplete="off">
+    <form method="post" autocomplete="off">
         {% csrf_token %}
         {{ form.non_field_errors }}
     <div class="login">
