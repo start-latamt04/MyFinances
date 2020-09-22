@@ -1,0 +1,129 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#dddddd;
+    font-family: 'Arial';
+}
+
+h1 {
+    font-family: 'Titillium Web', sans-serif;
+    margin-left: 680px;
+}
+
+h2 {
+    font-family: 'Bubblegum Sans', cursive, sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+
+.login{
+    width: 180px;
+    height: 400px;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-top: 25px;
+    padding: 80px;
+    background: #9BDC90;
+    border-radius: 15px ;
+
+}
+
+.login select{
+    position: relative;
+    color: #000000;
+    background-color: #dddddd;
+    top: -60px;
+    left: -60px;;
+    width: 100pt;
+    padding: 10px;
+}
+
+.login select#year{
+    position: relative;
+    color: #000000;
+    background-color: #dddddd;
+    top: -100px;
+    left: 90px;;
+    width: 100pt;
+    padding: 10px;
+}
+
+
+ul li {
+    color: #000000;
+}
+
+ul li span {
+    position: relative;
+    top: -40px;
+    left: -70px;
+}
+
+
+ul li:hover {
+    color: #BC0000;
+}
+
+.login input {
+    position: relative;
+    top: -80px;
+    margin-left: 15px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    background-color: #dddddd;
+    color: #000000;
+}
+
+.login img {
+    position: relative;
+    margin-left: 300px;
+    top: 150px;
+}
+
+.login a {
+    position: relative;
+    margin-left: -66px;
+    top: -159px;
+    color: #000000
+}
+
+.login a:hover {
+    color:  #BC0000;
+}
+
+.login p#fail{
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    color: #B90000;
+    top: -20px;
+    left: 8px;
+}
+
+.login p#ok{
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    color: #B9006F;
+    top: -20px;
+    left: 8px;
+}
+
+.login p#sucess{
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    color: #0400B9;
+    top: -20px;
+    left: 8px;
+}

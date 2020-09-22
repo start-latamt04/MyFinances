@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
-    {% block link%}<link rel="stylesheet" href="{%static '/css/relatorio.css' %}">{% endblock %}
+    {% block link%}
+            <link rel="stylesheet" href="{%static '/css/relatorio.css' %}">
+            <link rel="stylesheet" media="only screen and (max-width: 640px)" href="{% static '/css/relatorio_mobile.css' %}" type="text/css"/>
+    {% endblock %}
 
 {% block title %}Myfinances{% endblock %}
 
@@ -29,7 +32,7 @@
                     <option value="12">Dezembro</option>
                      </select></td>
 
-                  <td><select name="year">
+                  <td><select id="year" name="year">
                     <option selected value="2020">2020</option>
                     <option value="2021">2021</option>
                  </select></td>
@@ -47,13 +50,13 @@
             </li>
         </ul>
     {% endfor %}
-    {% if res.total_gastos > res.meta and dia == '10' %}
+    {% if res.total_gastos > res.meta and dia == '22' %}
         <p id="fail">Você ultrapassou a meta este mês! :(</p>
     {% endif %}
-    {% if res.total_gastos == res.meta and dia == '10' %}
+    {% if res.total_gastos == res.meta and dia == '22' %}
         <p id="ok">Você atingiu exatamente a meta esperada!</p>
     {% endif %}
-    {% if res.total_gastos < res.meta and dia == '10' %}
+    {% if res.total_gastos < res.meta and dia == '22' %}
         <p id="sucess">Você ficou abaixo da meta, Parabéns!!</p>
     {% endif %}
     <img src="{% static '/images/relatorio.png' %}" width="280px;"/>
