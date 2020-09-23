@@ -8,53 +8,37 @@ body {
     background-color: #dddddd;
 }
 
-div#menu {
-    display: block;
-}
-
-div#menu li:hover {
-    background-color: #606060;
-}
-
-div#menu ul {
-    list-style: none;
-    text-transform: uppercase;
-    position: relative;
-    top: 67px;
-
-}
-
-header#cabecalho img#foto1 {
-    width: 300px;
-    position: absolute;
-    left: 20px;
-    top: 417px;
-}
-
-div#menu li {
-    position: relative;
+.rel button {
+    width: 45%;
+    height: 40px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
     background-color: #9BDC90;
-    text-align: center;
-    width: 170pt;
-    padding: 10px;
-    top: -30px;
-    left: -25px;
-    -webkit-transition: background-color 1s;
-    -moz-transition: background-color 1s;
-    -ms-transition: background-color 1s;
-    -o-transition: background-color 1s;
-    transition: background-color 1s;
-}
-
-div#menu a {
     color: #000000;
+    position: relative;
+    left: 2%;
+    top: 25px;;
+
+
+}
+
+.rel button a {
     text-decoration: none;
 }
 
-div#menu a:hover {
-    color: #ffffff;
-    text-decoration: none;
+hgroup h1 img {
+    width: 12%;
 }
+
+
+.rodape img {
+    width: 85%;
+    position: absolute;
+    left: 25px;
+    top: 420px;
+}
+
 
 header#cabecalho h1 {
     font-family: 'Bubblegum Sans', cursive, sans-serif;

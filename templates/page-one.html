@@ -4,27 +4,25 @@
 
     {% block link%}
         <link rel="stylesheet" type="text/css" href="{% static '/css/page_one.css' %}"/>
-        <link rel="stylesheet" media="only screen and (max-width: 640px)" href="{% static '/css/page_one_mobile.css' %}" type="text/css"/>
+        <link rel="stylesheet" media="only screen and (max-width: 736px)" href="{% static '/css/page_one_mobile.css' %}" type="text/css"/>
     {% endblock %}
 
 {% block title %}MyFinances{% endblock %}
 {% block content %}
-        <div id="interface">
             <header id="cabecalho">
             <hgroup>
-                <h1> <img src="{% static '/images/money-back64.png' %}" width="45px"/> MyFinances</h1>
+                <h1> <img src="{% static '/images/money-back64.png' %}"/> MyFinances</h1>
             </hgroup>
-            <div id="menu">
-                <ul>
-                    <li><a href="{% url 'accounts:relatorio_despesas' %}">RELATÓRIO DE DESPESAS</a></li>
-                </ul>
-            </div>
-                 <img id="foto1" src="{% static '/images/page_one.png' %}">
             </header>
+            <div class="rel">
+                <button><a href="{% url 'accounts:relatorio_despesas' %}">RELATÓRIO DE DESPESAS</a></button>
+            </div>
             <form method="POST" class="form">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button type="submit" class="save btn btn-default">SALVAR</button>
             </form>
-        </div>
+            <div class="rodape">
+                <img src="{% static '/images/page_one.png' %}">
+            </div>
 {% endblock %}

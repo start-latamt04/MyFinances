@@ -6,52 +6,34 @@ body {
     background-color: #dddddd;
 }
 
-div#menu {
-    display: block;
-}
-
-div#menu li:hover {
-    background-color: #606060;
-}
-
-div#menu ul {
-    list-style: none;
-    text-transform: uppercase;
-    position: relative;
-    top: 67px;
-    left: 750px;
-
-}
-
-header#cabecalho img#foto1 {
-    width: 530px;
-    position: absolute;
-    left: -65px;
-    top: 455px;
-}
-
-div#menu li {
+.rel button {
+    width: 13%;
+    height: 40px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
     background-color: #9BDC90;
-    text-align: center;
-    width: 190pt;
-    padding: 10px;
-    margin-left: -250px;
-    -webkit-transition: background-color 1s;
-    -moz-transition: background-color 1s;
-    -ms-transition: background-color 1s;
-    -o-transition: background-color 1s;
-    transition: background-color 1s;
-}
-
-div#menu a {
     color: #000000;
+    margin-left: 30%
+
+}
+
+.rel button a {
     text-decoration: none;
 }
 
-div#menu a:hover {
-    color: #ffffff;
-    text-decoration: none;
+hgroup h1 img {
+    width: 3%;
 }
+
+
+.rodape img {
+    width: 30%;
+    position: relative;
+    left: -53px;;
+
+}
+
 
 header#cabecalho h1 {
     font-family: 'Bubblegum Sans', cursive, sans-serif;
@@ -61,6 +43,7 @@ header#cabecalho h1 {
     padding: 0px;
     margin-bottom: 0px;
 }
+
 
 header#cabecalho h2 {
     font-family: 'Titillium Web', sans-serif;
@@ -73,7 +56,7 @@ header#cabecalho h2 {
 
 
 .form button {
-    width: 200px;
+    width: 13%;
     height: 30px;
     border: none;
     border-radius: 17px;
@@ -82,6 +65,7 @@ header#cabecalho h2 {
     color: #000000;
     margin-left: 85px;
 }
+
 
 .form button:hover {
     color: #ffffff;
