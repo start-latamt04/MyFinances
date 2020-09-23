@@ -1,26 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
-    {% block link%}<link rel="stylesheet" href="{% static '/css/index.css' %}" type="text/css">{% endblock%}
+    {% block link%}
+        <link rel="stylesheet" href="{% static '/css/index.css' %}" type="text/css">
+        <link rel="stylesheet" media="only screen and (max-width: 640px)" href="{% static '/css/index_mobile.css' %}" type="text/css"/>
+    {% endblock%}
 
 {% block title %}MyFinances{% endblock %}
 
 {% block content %}
-<div id="interface">
     <header id="cabecalho">
     <hgroup>
         <h1><img src="{% static '/images/money-back64.png' %}" width="45px"/> MyFinances</h1>
-        <h2>Controle seus gastos de forma simples<br>
-        e rápida.</h2>
+        <h2>Controle seus gastos de forma simples e rápida.</h2>
     </hgroup>
     <center>
         <img id="foto1" src="{% static '/images/controle-gastos.png' %}" align="right">
     </center>
     </header>
-    <nav id="menu">
+    <div id="menu">
         <ul>
             <li><a href="/cadastro">CRIAR CONTA</a></li>
             <li><a href="/login">ACESSE SUA CONTA</a></li>
         </ul>
-    </nav>
-</div>
+    </div>
 {% endblock %}

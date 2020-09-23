@@ -7,7 +7,7 @@ body {
 }
 
 div#menu {
-    display: block;
+    display: flex;
 }
 
 div#menu li:hover {
@@ -18,9 +18,17 @@ div#menu ul {
     list-style: none;
     text-transform: uppercase;
     position: absolute;
-    top: 350px;
-    left: 20px;
+    top: 430px;
+    left: -25px;
 
+}
+
+header#cabecalho img#foto1 {
+    width: 80%;;
+    margin: 0px, 0px, 0px, 3px;
+    position: absolute;
+    left: 40px;
+    top: 200px;
 }
 
 div#menu li {
@@ -35,6 +43,8 @@ div#menu li {
     -ms-transition: background-color 1s;
     -o-transition: background-color 1s;
     transition: background-color 1s;
+    top: 50px;
+
 }
 
 div#menu a {
@@ -45,14 +55,6 @@ div#menu a {
 div#menu a:hover {
     color: #ffffff;
     text-decoration: none;
-}
-
-
-header#cabecalho img#foto1 {
-    width: 650px;
-    position: absolute;
-    left: 680px;
-    top: 80px;
 }
 
 

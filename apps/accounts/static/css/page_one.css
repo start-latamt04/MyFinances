@@ -2,20 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 
 body {
-    width: 100%;
     font-family: Arial, sans-serif;
     background-color: #dddddd;
 }
 
-nav#menu {
+div#menu {
     display: block;
 }
 
-nav#menu li:hover {
+div#menu li:hover {
     background-color: #606060;
 }
 
-nav#menu ul {
+div#menu ul {
     list-style: none;
     text-transform: uppercase;
     position: relative;
@@ -31,7 +30,7 @@ header#cabecalho img#foto1 {
     top: 455px;
 }
 
-nav#menu li {
+div#menu li {
     background-color: #9BDC90;
     text-align: center;
     width: 190pt;
@@ -44,12 +43,12 @@ nav#menu li {
     transition: background-color 1s;
 }
 
-nav#menu a {
+div#menu a {
     color: #000000;
     text-decoration: none;
 }
 
-nav#menu a:hover {
+div#menu a:hover {
     color: #ffffff;
     text-decoration: none;
 }
@@ -72,16 +71,6 @@ header#cabecalho h2 {
     margin-left: 25px;
 }
 
-div ul li.s {
-    margin-top: 25px;
-    margin-left: -40px;
-    display: inline-block;
-    width: 180px;
-    height: 30px;
-    padding: 5px;
-    border: 1px solid #dddddd;
-    background-color: #9BDC90;
-}
 
 .form button {
     width: 200px;

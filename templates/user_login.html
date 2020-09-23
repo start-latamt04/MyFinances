@@ -2,7 +2,10 @@
 {% load static %}
 
 
-    {% block link%}<link rel="stylesheet" href="{% static '/css/login.css' %}" type="text/css">{% endblock%}
+    {% block link%}
+        <link rel="stylesheet" href="{% static '/css/login.css' %}" type="text/css">
+        <link rel="stylesheet" media="only screen and (max-width: 640px)" href="{% static '/css/login_mobile.css' %}" type="text/css"/>
+    {% endblock%}
 
 {% block title%}MyFinances{% endblock%}
 
