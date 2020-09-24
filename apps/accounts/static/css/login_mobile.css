@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body{
+body {
     margin: 0;
     padding: 0;
     background-color:#dddddd;
@@ -8,21 +8,22 @@ body{
 }
 
 
-.login{
-    width: 315px;
+.login {
+    width: 83%;
     overflow: hidden;
-    margin-left: 10px;
-    margin-top: 60px;
-    padding: 10px;
+    margin-left: 5%;
+    margin-top: 20%;
+    padding: 5%;
     background: #B298FB;
     border-radius: 15px;
-    height: 300px;
+    height: 48%;
 
 }
 
 
+
 .title h1 {
-    font-family: 'Bubblegum Sans', cursive, sans-serif;
+    font-family: 'Roboto', cursive, sans-serif;
     font-size: 20pt;
     color: #606060;
     text-shadow: 1px 1px 1px rgba(0,0,0,.6);
@@ -38,7 +39,7 @@ h2{
     color: #ffffff;
     padding: 20px;
     margin-top: 5px;
-    font-family: 'Bubblegum Sans', cursive, sans-serif;
+    font-family: 'Helvetica', cursive, sans-serif;
 }
 
 label{
@@ -84,6 +85,7 @@ a {
     position: relative;
     background-color: #b298fb;
     color: #ffffff;
+    font-weight: bold;
     text-decoration: none;
     margin-left: 82px;
     bottom: -50px;

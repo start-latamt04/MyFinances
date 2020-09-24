@@ -9,7 +9,7 @@ body{
 
 h1 {
     font-family: 'Bubblegum Sans', cursive, sans-serif;
-    font-size: 30pt;
+    font-size: 20pt;
     color: #606060;
     text-shadow: 1px 1px 1px rgba(0,0,0,.6);
     padding: 0px;
@@ -17,9 +17,9 @@ h1 {
 }
 
 .login{
-    width: 230px;
+    width: 70%;
     overflow: hidden;
-    margin-left: 15px;
+    margin-left: 3%;
     margin-top: 50px;
     padding: 50px;
     background: #B298FB;
@@ -31,7 +31,7 @@ h2{
     color: #ffffff;
     padding: 20px;
     margin-top: 10px;
-    font-family: 'Bubblegum Sans', cursive, sans-serif;
+    font-family: 'Helvetica', cursive, sans-serif;
 }
 
 #first_name {

@@ -24,10 +24,10 @@ h2 {
 
 
 .login{
-    width: 180px;
+    width: 58%;
     height: 400px;
     overflow: hidden;
-    margin-left: 10px;
+    margin-left: auto;
     margin-top: 25px;
     padding: 80px;
     background: #9BDC90;

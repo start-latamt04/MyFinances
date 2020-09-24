@@ -4,7 +4,7 @@
 
     {% block link%}
         <link rel="stylesheet" href="{% static '/css/login.css' %}" type="text/css">
-        <link rel="stylesheet" media="only screen and (max-width: 640px)" href="{% static '/css/login_mobile.css' %}" type="text/css"/>
+        <link rel="stylesheet" media="only screen and (max-width: 736px)" href="{% static '/css/login_mobile.css' %}" type="text/css"/>
     {% endblock%}
 
 {% block title%}MyFinances{% endblock%}
@@ -13,10 +13,9 @@
     <div class="title">
         <h1><img src="{% static '/images/money-back64.png' %}" width="45px" style="margin-top: 10px;"/>MyFinances</h1>
     </div>
-
-        <form action="." method="post" autocomplete="off" id="login">
-            {% csrf_token %}
-            <div class="login">
+        <div class="login">
+            <form method="post" autocomplete="off">
+                {% csrf_token %}
                 <h2>LOGIN</h2>
                 {% for message in messages %}
                     <div class="alert">
@@ -29,6 +28,6 @@
                 <input type="password" name="password" id="password" maxlength="12" placeholder="Senha">
                 <button type="submit" id="log">Entrar</button>
                 <a href="{% url 'accounts:cadastro' %}"> ou Cadastre-se agora!</a>
-            </div>
-        </form>
+            </form>
+        </div>
 {% endblock %}

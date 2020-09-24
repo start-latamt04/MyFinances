@@ -3,7 +3,7 @@
 {% load static %}
 
     {% block link %}<link rel="stylesheet" href="{% static '/css/create.css' %}" type="text/css">
-                    <link rel="stylesheet" media="only screen and (max-width: 640px)" href="{% static '/css/create_mobile.css' %}" type="text/css"/>
+                    <link rel="stylesheet" media="only screen and (max-width: 736px)" href="{% static '/css/create_mobile.css' %}" type="text/css"/>
     {% endblock%}
 
 {% block title %}MyFinances{% endblock %}
@@ -17,10 +17,10 @@
             {{ message }}
         {% endfor %}
     {% endif %}
+<div class="login">
     <form method="post" autocomplete="off">
         {% csrf_token %}
         {{ form.non_field_errors }}
-    <div class="login">
         <h2>CADASTRE - SE</h2>
         <div class="errors">
             {{ form.email.errors }}
@@ -46,7 +46,6 @@
         </div>
         <button type="submit" id="log">Criar conta</button><br/>
         <a id="acesse" href="{% url 'accounts:user_login' %}">Fazer Login</a>
-    </div>
     </form>
-
+</div>
 {% endblock %}
