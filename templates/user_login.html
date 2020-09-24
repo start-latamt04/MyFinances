@@ -22,10 +22,9 @@
                         {{ message }}
                     </div>
                 {% endfor %}
-                <label>Usuario:</label>
+                <label id="usuario">Usuario:</label>
                 <input type="text" name="username" id="username" maxlength="100" placeholder="Usuário ou Email">
-                <label>Senha:</label>
-                <input type="password" name="password" id="password" maxlength="12" placeholder="Senha">
+                <label id="senha">Senha:<input type="password" name="password" id="password" maxlength="12" placeholder="Senha"></label>
                 <button type="submit" id="log">Entrar</button>
                 <a href="{% url 'accounts:cadastro' %}">Cadastre-se agora!</a>
             </form>

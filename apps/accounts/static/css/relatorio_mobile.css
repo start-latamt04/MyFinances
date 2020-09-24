@@ -23,17 +23,17 @@ h2 {
 }
 
 
-.login{
-    width: 58%;
+.login {
+    width: 200px;
     height: 400px;
     overflow: hidden;
-    margin-left: auto;
+    margin-left: 7%;
     margin-top: 25px;
     padding: 80px;
     background: #9BDC90;
-    border-radius: 15px ;
-
+    border-radius: 15px;
 }
+
 
 .login select{
     position: relative;
